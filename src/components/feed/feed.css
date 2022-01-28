@@ -1,15 +1,21 @@
 div.feed-container {
   height: calc(100vh - 60px);
   padding-top: 10px;
-  width: 60%;
-  margin-top: 60px;
-  margin-left: 6%;
+  max-width: 35rem;
+  margin: 60px auto 0;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  div.feed-container {
+    max-width: 60%;
+    margin-top: 60px;
+    margin-left: 6%;
+  }
 }
 
 @media screen and (min-width: 1100px) {
   div.feed-container {
     margin: 60px auto 0;
-    width: 42%;
-    /* margin-left: 6%; */
+    max-width: 42%;
   }
 }

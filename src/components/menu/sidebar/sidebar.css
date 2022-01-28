@@ -1,4 +1,5 @@
 .sidebar-container.sidebar-right {
+  display: none;
   width: 28%;
 }
 
@@ -72,5 +73,11 @@ h3 {
   .sidebar-container.sidebar-right,
   .sidebar-container.sidebar-left {
     width: 22%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .sidebar-container.sidebar-right {
+    display: block;
   }
 }

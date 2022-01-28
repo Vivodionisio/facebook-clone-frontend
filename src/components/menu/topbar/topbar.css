@@ -66,6 +66,7 @@
   background: rgb(239, 239, 239);
   border-radius: 1000px;
   align-items: center;
+  cursor: pointer;
 }
 
 .search-fb-field {
@@ -160,6 +161,7 @@
     display: inline-block;
   }
   .search-fb-wrapper {
+    cursor: initial;
     width: 200px;
   }
   .btn-user-page {

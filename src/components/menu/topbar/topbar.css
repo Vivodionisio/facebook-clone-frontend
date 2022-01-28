@@ -8,9 +8,8 @@
   padding: 0 0.5em;
   height: 56px;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
-  box-shadow: -5px -5px rgba(119, 119, 119, 0.2);
+  box-shadow: 0px -2px 6px rgb(202 202 202);
 }
 
 .topbar-right,

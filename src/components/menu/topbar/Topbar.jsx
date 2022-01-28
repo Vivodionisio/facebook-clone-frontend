@@ -27,6 +27,7 @@ export default function Topbar() {
           <input className="search-fb-field" placeholder="Search Facebook" />
         </div>
       </div>
+
       <div className="topbar-main">
         <button className="btn btn-main">
           <CottageOutlinedIcon />

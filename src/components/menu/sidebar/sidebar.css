@@ -48,11 +48,10 @@ h3 {
 }
 
 .sidebar-container {
-  height: calc(100vh - 60px);
+  height: calc(100vh - 56px);
   padding-top: 10px;
   overflow: scroll;
-  margin-top: 60px;
-  /* position: fixed; */
+  margin-top: 56px;
 }
 
 .sidebar-container.sidebar-right {
@@ -61,9 +60,13 @@ h3 {
 }
 
 .sidebar-container.sidebar-left {
-  display: none;
   position: fixed;
   left: 6px;
+  /* EDITING HERE */
+  display: none;
+  background: var(--light);
+  width: calc(100% - 1rem);
+  z-index: 3;
 }
 
 @media screen and (min-width: 1100px) {

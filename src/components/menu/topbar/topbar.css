@@ -172,6 +172,9 @@
   .topbar-main .btn:last-child {
     display: none;
   }
+  .topbar-main .btn-main:nth-child(5) {
+    margin-right: 0px;
+  }
 }
 @media screen and (min-width: 990px) {
   .topbar-main .btn:not(.topbar-main .btn:last-child) {

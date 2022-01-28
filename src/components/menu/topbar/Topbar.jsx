@@ -15,6 +15,7 @@ import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 
 export default function Topbar() {
+  // console.log(display)
   console.log('hello')
   return (
     <div className="topbar-container">
@@ -44,7 +45,15 @@ export default function Topbar() {
         <button className="btn btn-main">
           <SportsEsportsOutlinedIcon />
         </button>
-        <button className="btn btn-main">
+
+        <button
+          // onClick={() =>
+          //   setDisplay(prevDisplay => {
+          //     return prevDisplay === 'none' ? 'block' : 'none'
+          //   })
+          // }
+          className="btn btn-main"
+        >
           <MenuRoundedIcon />
         </button>
       </div>

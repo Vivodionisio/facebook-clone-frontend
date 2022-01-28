@@ -11,7 +11,7 @@ export default function SidebarLeft() {
         <div className="section-1">
           {sideIcons.map(sideIcon => {
             return (
-              <button key={sideIcon.name} className="btn">
+              <button key={sideIcon.id} className="btn">
                 <sideIcon.icon className="icon" />
                 <span className="name">{sideIcon.name}</span>
               </button>
@@ -26,7 +26,7 @@ export default function SidebarLeft() {
           <h3>Your Shortcuts</h3>
           {sideIcons2.map(sideIcon => {
             return (
-              <button key={sideIcon.iconName} className="btn">
+              <button key={sideIcon.id} className="btn">
                 <sideIcon.icon className="icon"></sideIcon.icon>
                 <span className="name">{sideIcon.name}</span>
               </button>

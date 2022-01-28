@@ -6,9 +6,9 @@ import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternate
 import MoodIcon from '@mui/icons-material/Mood'
 
 const createPostIcons = [
-  { icon: VideocamOutlinedIcon, name: 'Live video' },
-  { icon: AddPhotoAlternateOutlinedIcon, name: 'Photos/video' },
-  { icon: MoodIcon, name: 'Feeling activity' }
+  { id: 1, icon: VideocamOutlinedIcon, name: 'Live video' },
+  { id: 2, icon: AddPhotoAlternateOutlinedIcon, name: 'Photos/video' },
+  { id: 3, icon: MoodIcon, name: 'Feeling activity' }
 ]
 
 export default function CreatePost() {
@@ -23,7 +23,7 @@ export default function CreatePost() {
       <div className="card-footer">
         {createPostIcons.map(icon => {
           return (
-            <button className="btn">
+            <button key={icon.id} className="btn">
               <p>{icon.name}</p>
               <icon.icon className="icon" />
             </button>

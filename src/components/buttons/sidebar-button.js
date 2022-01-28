@@ -13,19 +13,19 @@ import FlightTakeoffTwoToneIcon from '@mui/icons-material/FlightTakeoffTwoTone'
 import FortTwoToneIcon from '@mui/icons-material/FortTwoTone'
 
 export const sideIcons = [
-  { icon: FaceRoundedIcon, name: 'Jacamo Flys' },
-  { icon: PeopleAltRoundedIcon, name: 'Friends' },
-  { icon: GroupWorkRoundedIcon, name: 'Groups' },
-  { icon: StorefrontRoundedIcon, name: 'Marketplace' },
-  { icon: OndemandVideoRoundedIcon, name: 'Watch' },
-  { icon: AvTimerRoundedIcon, name: 'Memories' },
-  { icon: BookmarkRoundedIcon, name: 'Saved' },
-  { icon: FavoriteRoundedIcon, name: 'Favourites' },
-  { icon: VideogameAssetRoundedIcon, name: 'Games' }
+  { id: 1, icon: FaceRoundedIcon, name: 'Jacamo Flys' },
+  { id: 2, icon: PeopleAltRoundedIcon, name: 'Friends' },
+  { id: 3, icon: GroupWorkRoundedIcon, name: 'Groups' },
+  { id: 4, icon: StorefrontRoundedIcon, name: 'Marketplace' },
+  { id: 5, icon: OndemandVideoRoundedIcon, name: 'Watch' },
+  { id: 6, icon: AvTimerRoundedIcon, name: 'Memories' },
+  { id: 7, icon: BookmarkRoundedIcon, name: 'Saved' },
+  { id: 8, icon: FavoriteRoundedIcon, name: 'Favourites' },
+  { id: 9, icon: VideogameAssetRoundedIcon, name: 'Games' }
 ]
 
 export const sideIcons2 = [
-  { icon: FaceTwoToneIcon, name: `Jacamo's Flys Music` },
-  { icon: FlightTakeoffTwoToneIcon, name: 'Flight Simulator' },
-  { icon: FortTwoToneIcon, name: 'Fortify' }
+  { id: 1, icon: FaceTwoToneIcon, name: `Jacamo's Flys Music` },
+  { id: 2, icon: FlightTakeoffTwoToneIcon, name: 'Flight Simulator' },
+  { id: 3, icon: FortTwoToneIcon, name: 'Fortify' }
 ]

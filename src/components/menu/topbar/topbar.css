@@ -85,7 +85,7 @@
   background: rgb(239, 239, 239);
 }
 
-.btn-main:not(.btn-round:last-child) {
+.btn-main:not(.btn-main:last-child) {
   margin-right: 5px;
 }
 

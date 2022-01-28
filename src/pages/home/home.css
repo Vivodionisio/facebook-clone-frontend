@@ -8,6 +8,13 @@ body {
   margin: 0 0.5rem;
 }
 
+:root {
+  --dark: black;
+  --medium: grey;
+  --medium-light: lightgrey;
+  --light: rgb(239, 239, 239);
+}
+
 .topbar-fixed {
   position: fixed;
   width: 100%;

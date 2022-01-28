@@ -17,7 +17,7 @@ export default function Comments() {
         <div className="write-comment-container">
           <AccountCircleIcon className="account-icon" />
           <div className="write-comment-pill-wrapper">
-            <SearchOutlinedIcon className="icon" />
+            {/* <SearchOutlinedIcon className="icon" /> */}
             <input
               className="write-comment-field"
               placeholder="Write a comment"

@@ -12,6 +12,7 @@ import GrainRoundedIcon from '@mui/icons-material/GrainRounded'
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble'
 import NotificationsIcon from '@mui/icons-material/Notifications'
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded'
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 
 export default function Topbar() {
   console.log('hello')
@@ -41,6 +42,9 @@ export default function Topbar() {
         </button>
         <button className="btn btn-main">
           <SportsEsportsOutlinedIcon />
+        </button>
+        <button className="btn btn-main">
+          <MenuRoundedIcon />
         </button>
       </div>
 

@@ -8,7 +8,7 @@
   padding: 0 0.5em;
   height: 56px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   box-shadow: -5px -5px rgba(119, 119, 119, 0.2);
 }
@@ -19,11 +19,25 @@
   align-items: center;
   width: 22%;
 }
+.topbar-left {
+  width: 6.5rem;
+}
 
 .topbar-right {
   justify-content: right;
+  position: absolute;
+  right: 5px;
 }
 
+.topbar-main {
+  width: 42%;
+  display: flex;
+  /* /* justify-content: space-between; */
+}
+
+/* Elements */
+
+/* generic (move to home.css) */
 .btn {
   background: none;
   border: none;
@@ -48,36 +62,35 @@
 .search-fb-wrapper {
   display: flex;
   height: 40px;
-  width: 200px;
+  width: 40px;
   background: rgb(239, 239, 239);
   border-radius: 1000px;
   align-items: center;
 }
 
 .search-fb-field {
+  display: none;
   background: none;
   padding: 10px;
+  padding-left: 0;
   border: none;
   outline: none;
 }
 
 .search-fb-wrapper .icon {
-  margin-left: 10px;
+  color: var(--medium);
+  /* margin-left: 10px; */
+  padding: 0.3em;
 }
 
 /* main */
 
-.topbar-main {
-  width: 42%;
-  display: flex;
-  justify-content: space-between;
-}
 .btn-main {
   border: none;
   background: none;
   color: rgb(75, 75, 75);
   border-radius: 0.4em;
-  width: 10em;
+  width: 4.5em;
   height: 3.5em;
 }
 
@@ -102,7 +115,7 @@
   position: relative;
   background: none;
   padding: 0.5em 1em;
-  display: flex;
+  display: none;
   align-items: center;
   border-radius: 1000px;
   padding-right: 0.5em;
@@ -136,4 +149,52 @@
 }
 .btn-round .icon:hover {
   background-color: rgb(219, 219, 219);
+}
+
+.topbar-main .btn:not(.topbar-main .btn:last-child) {
+  display: none;
+}
+
+@media screen and (min-width: 1260px) {
+  .search-fb-field {
+    display: inline-block;
+  }
+  .search-fb-wrapper {
+    width: 200px;
+  }
+  .btn-user-page {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .topbar-main .btn:last-child {
+    display: none;
+  }
+}
+@media screen and (min-width: 990px) {
+  .topbar-main .btn:not(.topbar-main .btn:last-child) {
+    display: inline-block;
+  }
+
+  .topbar-container {
+    justify-content: space-between;
+  }
+  .btn-main {
+    width: 10em;
+  }
+
+  .topbar-main {
+    width: 42%;
+    justify-content: space-between;
+    display: flex;
+    justify-content: right;
+  }
+
+  .topbar-right {
+    position: static;
+  }
+  .topbar-left {
+    width: 22%;
+  }
 }

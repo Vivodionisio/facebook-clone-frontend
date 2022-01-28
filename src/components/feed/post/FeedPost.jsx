@@ -1,10 +1,10 @@
 import React from 'react'
+import './feed-post.css'
 import PostHeader from './post-header/PostHeader'
 import PostBody from './post-body/PostBody'
 import PostEngagements from './post-engagements/PostEngagements'
-import './post.css'
 
-export default function Post() {
+export default function FeedPost() {
   return (
     <>
       <div className="card post-card">

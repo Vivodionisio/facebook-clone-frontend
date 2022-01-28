@@ -2,6 +2,5 @@ div.feed-container {
   height: calc(100vh - 60px);
   width: 42%;
   padding-top: 10px;
-  /* margin-top: 60px; */
   margin: 60px auto 0;
 }

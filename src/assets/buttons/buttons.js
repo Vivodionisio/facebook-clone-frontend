@@ -12,6 +12,10 @@ import FaceTwoToneIcon from '@mui/icons-material/FaceTwoTone'
 import FlightTakeoffTwoToneIcon from '@mui/icons-material/FlightTakeoffTwoTone'
 import FortTwoToneIcon from '@mui/icons-material/FortTwoTone'
 
+import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined'
+import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined'
+import MoodIcon from '@mui/icons-material/Mood'
+
 export const sideIcons = [
   { id: 1, icon: FaceRoundedIcon, name: 'Jacamo Flys' },
   { id: 2, icon: PeopleAltRoundedIcon, name: 'Friends' },
@@ -28,4 +32,10 @@ export const sideIcons2 = [
   { id: 1, icon: FaceTwoToneIcon, name: `Jacamo's Flys Music` },
   { id: 2, icon: FlightTakeoffTwoToneIcon, name: 'Flight Simulator' },
   { id: 3, icon: FortTwoToneIcon, name: 'Fortify' }
+]
+
+export const createPostIcons = [
+  { id: 1, icon: VideocamOutlinedIcon, name: 'Live video' },
+  { id: 2, icon: AddPhotoAlternateOutlinedIcon, name: 'Photos/video' },
+  { id: 3, icon: MoodIcon, name: 'Feeling activity' }
 ]

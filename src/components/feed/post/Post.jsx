@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './feed-post.css'
 import './post-header.css'
 import './post-header.css'
@@ -23,11 +23,11 @@ console.log(PostData)
 export default function Post() {
   // const [isLiked, setIsLiked] = useState(false)
   // const [like, setLike] = useState(likes)
-  // const likeClickHandler = () => {
-  //   console.log(like)
+  // const likeClickHandler = post => {
+  //   console.log(post)
   //   console.log('handler clicked')
-  //   setLike(isLiked ? like - 1 : like + 1)
-  //   setIsLiked(!isLiked)
+  // setLike(isLiked ? like - 1 : like + 1)
+  // setIsLiked(!isLiked)
   // }
 
   return (
@@ -42,7 +42,7 @@ export default function Post() {
               <div className="post-details">
                 <p>
                   <a className="user-name" href="#">
-                    {post.name}
+                    {post.userName}
                   </a>
                 </p>
                 <div className="minutiae-wrapper">
@@ -90,10 +90,14 @@ export default function Post() {
               </div>
             </div>
 
-            {/* <CommentLikeShare /> */}
+            {/* Like Comment Share */}
+
             <div className="card-footer">
               <button className="btn">
-                <ThumbUpAltOutlinedIcon className="like-icon" />
+                <ThumbUpAltOutlinedIcon
+                  // onClick={() => likeClickHandler(post)}
+                  className="like-icon"
+                />
                 <ThumbUpIcon className="like-icon" />
                 <p>Like</p>
               </button>
@@ -108,6 +112,7 @@ export default function Post() {
             </div>
 
             {/* <Comments /> */}
+
             <div className="comments-wrapper wrapper">
               <div className="relevant-wrapper">
                 <button className="btn">

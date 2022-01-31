@@ -1,15 +1,7 @@
 import React from 'react'
 import './create-post.css'
 import FaceIcon from '@mui/icons-material/Face'
-import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined'
-import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined'
-import MoodIcon from '@mui/icons-material/Mood'
-
-const createPostIcons = [
-  { id: 1, icon: VideocamOutlinedIcon, name: 'Live video' },
-  { id: 2, icon: AddPhotoAlternateOutlinedIcon, name: 'Photos/video' },
-  { id: 3, icon: MoodIcon, name: 'Feeling activity' }
-]
+import { createPostIcons } from '../../../assets/buttons/buttons'
 
 export default function CreatePost() {
   return (

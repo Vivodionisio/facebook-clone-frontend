@@ -32,10 +32,10 @@
   border-radius: 50%;
 }
 
-.engagements-wrapper .emojis-wrapper a:nth-child(2) {
+.engagements-wrapper .emojis-wrapper .emoji:nth-child(2) {
   margin-left: -5px;
 }
-.engagements-wrapper .emojis-wrapper a:nth-child(3) {
+.engagements-wrapper .emojis-wrapper .emoji:nth-child(3) {
   margin-left: -5px;
 }
 
@@ -43,15 +43,15 @@
   margin-left: 10px;
 }
 
-a.number-of-comments,
-a.number-of-shares {
+.number-of-comments,
+.number-of-shares {
   color: var(--medium);
   font-size: 14px;
   text-decoration: none;
 }
 
-a.number-of-comments:hover,
-a.number-of-shares:hover {
+.number-of-comments:hover,
+.number-of-shares:hover {
   text-decoration: underline;
 }
 
@@ -76,4 +76,20 @@ a.number-of-shares:hover {
 .post-card .card-footer {
   padding: 0.2em 0;
   border-bottom: 1px solid var(--medium-light);
+}
+
+.emojis-wrapper {
+  display: flex;
+}
+
+.emojis-wrapper .likes-count {
+  align-self: center;
+  font-size: 14px;
+  margin-left: 5px;
+  color: var(--medium);
+  cursor: pointer;
+}
+
+.emojis-wrapper .likes-count:hover {
+  text-decoration: underline;
 }

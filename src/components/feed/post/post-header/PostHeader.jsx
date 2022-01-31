@@ -4,18 +4,19 @@ import MoreHorizRoundedIcon from '@mui/icons-material/MoreHorizRounded'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import './post-header.css'
 
-export default function PostHeader() {
+export default function PostHeader({ name, date, online }) {
   return (
-    <div className="card-header wrapper">
+    <div className="card-header wrapper post">
       <AccountCircleIcon className="icon" />
+      {online && <div className="online"></div>}
       <div className="post-details">
         <p>
           <a className="user-name" href="#">
-            Jeromy Berisford
+            {name}
           </a>
         </p>
         <div className="minutiae-wrapper">
-          <a href="#">5 h</a>
+          <a href="#">{date}</a>
           <span>&middot;</span>
           <PeopleAltIcon className="friends-icon-small" />
         </div>

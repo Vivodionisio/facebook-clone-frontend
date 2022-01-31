@@ -2,19 +2,22 @@
 .comment-bubble-container {
   margin-bottom: 10px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  /* align-items: center; */
 }
 
 .write-comment-container .account-icon,
 .comment-bubble-container .account-icon {
   margin-right: 10px;
   font-size: 2.2rem;
+  /* align-self: flex-start; */
 }
 
 .write-comment-pill-wrapper {
   display: flex;
   height: 40px;
-  width: 100%;
+  /* width: 100%; */
+  width: calc(100% - 2.2rem - 10px);
   background: rgb(239, 239, 239);
   border-radius: 1000px;
   align-items: center;
@@ -39,13 +42,13 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%;
+  max-width: calc(100% - 2.2rem - 10px);
   background: var(--light);
   border-radius: 1em;
 }
 
 .bubble-wrapper .comment-wrapper {
-  padding: 0.8em;
+  padding: 0.5em 0.8em;
 }
 
 .bubble-wrapper .comment-wrapper a {
@@ -63,3 +66,25 @@
 .bubble-wrapper .comment-wrapper a:hover {
   text-decoration: underline;
 }
+
+.line-break {
+  width: 100%;
+}
+
+.comment-engagememnt {
+  margin-left: calc(4.2rem);
+}
+.comment-engagememnt a {
+  font-size: 0.8rem;
+  margin-right: 10px;
+  text-decoration: none;
+  color: var(--medium);
+}
+
+.comment-engagememnt a:hover {
+  text-decoration: underline;
+}
+
+/* .comment-engagememnt:not(a:last-child) {
+  margin-right: 10px;
+} */

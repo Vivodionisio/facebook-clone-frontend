@@ -1,0 +1,15 @@
+.emojis-wrapper {
+  display: flex;
+}
+
+.emojis-wrapper .likes-count {
+  align-self: center;
+  font-size: 14px;
+  margin-left: 5px;
+  color: var(--medium);
+  cursor: pointer;
+}
+
+.emojis-wrapper .likes-count:hover {
+  text-decoration: underline;
+}

@@ -1,16 +1,19 @@
 import React from 'react'
 import './post-body.css'
-import MyImage from '../../../../images/avatar.jpeg'
 
-export default function PostBody() {
+export default function PostBody({ desc, image }) {
   return (
     <div className="card-body">
-      <div className="wrapper">
-        <p className="description">Avatar!</p>
-      </div>
-      <div className="image-wrapper">
-        <img className="post-image" src={MyImage} alt="" />
-      </div>
+      {desc && (
+        <div className="wrapper">
+          <p className="description">{desc}</p>
+        </div>
+      )}
+      {image && (
+        <div className="image-wrapper">
+          <img className="post-image" src={image} alt="" />
+        </div>
+      )}
     </div>
   )
 }

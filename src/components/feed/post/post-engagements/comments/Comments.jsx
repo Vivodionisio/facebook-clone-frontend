@@ -1,6 +1,7 @@
 import React from 'react'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded'
+import FaceIcon from '@mui/icons-material/Face'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
 import './comments.css'
 
@@ -15,9 +16,8 @@ export default function Comments() {
           </button>
         </div>
         <div className="write-comment-container">
-          <AccountCircleIcon className="account-icon" />
+          <FaceIcon className="account-icon" />
           <div className="write-comment-pill-wrapper">
-            {/* <SearchOutlinedIcon className="icon" /> */}
             <input
               className="write-comment-field"
               placeholder="Write a comment"
@@ -31,13 +31,20 @@ export default function Comments() {
               <a href="#" className="comment-name">
                 Popeye
               </a>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum
-                assumenda aperiam delectus saepe dignissimos. Alias neque libero
-                ratione? Magni ipsam sit accusamus sed adipisci voluptate sunt
-                reiciendis harum! Distinctio, ipsam.
-              </p>
+              <p>Amet consectetur adipisicing...</p>
             </div>
+          </div>
+          <div className="line-break"></div>
+          <div className="comment-engagememnt">
+            <a className="likes" href="#">
+              Like
+            </a>
+            <a className="reply" href="#">
+              Reply
+            </a>
+            <a className="date" href="#">
+              1 h
+            </a>
           </div>
         </div>
       </div>

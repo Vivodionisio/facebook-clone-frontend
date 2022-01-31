@@ -1,7 +1,7 @@
 import React from 'react'
 import './sidebar.css'
-import { sideIcons } from '../../buttons/sidebar-button'
-import { sideIcons2 } from '../../buttons/sidebar-button'
+import { sideIcons } from '../../../assets/buttons/sidebar-button'
+import { sideIcons2 } from '../../../assets/buttons/sidebar-button'
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded'
 
 export default function SidebarLeft() {

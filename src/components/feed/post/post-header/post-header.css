@@ -1,5 +1,19 @@
 /* also uses wrapper (utility)*/
 
+.wrapper.post {
+  position: relative;
+}
+.wrapper.post .online {
+  position: absolute;
+  left: 1.7rem;
+  top: 2.3rem;
+  height: 0.6em;
+  width: 0.6em;
+  background-color: green;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
 .post-details {
   display: flex;
   flex-direction: column;

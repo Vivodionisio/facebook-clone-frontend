@@ -8,7 +8,6 @@ export default function Posts() {
     <div className="feed-container">
       <CreatePost />
       <FeedPost />
-      <FeedPost />
     </div>
   )
 }

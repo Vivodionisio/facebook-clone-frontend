@@ -4,7 +4,7 @@ import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded'
 import MoodRoundedIcon from '@mui/icons-material/MoodRounded'
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined'
 
-export default function EngagementsTally() {
+export default function EngagementsTally({ likes, shares, comments }) {
   return (
     <>
       <div className="wrapper engagements-wrapper">
@@ -18,13 +18,15 @@ export default function EngagementsTally() {
           <a href="#">
             <MoodRoundedIcon className="emoji" />
           </a>
+          <a className="likes-count">{likes}</a>
         </div>
+
         <div>
           <a className="number-of-comments" href="#">
-            24 comments
+            {comments}
           </a>
           <a className="number-of-shares" href="#">
-            9 shares
+            {shares}
           </a>
         </div>
       </div>

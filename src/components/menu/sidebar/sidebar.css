@@ -3,6 +3,10 @@
   width: 28%;
 }
 
+.sidebar-bottom {
+  height: 20px;
+}
+
 .sidebar-container .section-1,
 .sidebar-container .section-2 {
   display: flex;
@@ -11,7 +15,7 @@
 }
 
 .sidebar-container .section-1 {
-  border-bottom: 1px solid lightgrey;
+  /* border-bottom: 1px solid lightgrey; */
 }
 
 .sidebar-container .btn {

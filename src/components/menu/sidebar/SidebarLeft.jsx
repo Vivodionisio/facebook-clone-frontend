@@ -33,6 +33,7 @@ export default function SidebarLeft() {
             )
           })}
         </div>
+        <div className="sidebar-bottom"></div>
       </div>
     </>
   )

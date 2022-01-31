@@ -42,6 +42,7 @@ export default function SidebarRight() {
           )
         })}
       </div>
+      <div className="sidebar-bottom"></div>
     </div>
   )
 }

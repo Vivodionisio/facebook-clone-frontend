@@ -27,6 +27,7 @@ export default function FeedPost() {
           </div>
         )
       })}
+      <div className="bottom"></div>
     </>
   )
 }

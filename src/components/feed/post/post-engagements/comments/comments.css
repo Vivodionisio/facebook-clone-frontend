@@ -81,6 +81,11 @@
   color: var(--medium);
 }
 
+.comment-engagememnt a.like,
+.comment-engagememnt a.reply {
+  font-weight: 500;
+}
+
 .comment-engagememnt a:hover {
   text-decoration: underline;
 }

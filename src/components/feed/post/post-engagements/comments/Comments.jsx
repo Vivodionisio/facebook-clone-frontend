@@ -36,7 +36,34 @@ export default function Comments() {
           </div>
           <div className="line-break"></div>
           <div className="comment-engagememnt">
-            <a className="likes" href="#">
+            <a className="like" href="#">
+              Like
+            </a>
+            <a className="reply" href="#">
+              Reply
+            </a>
+            <a className="date" href="#">
+              1 h
+            </a>
+          </div>
+        </div>
+        <div className="comment-bubble-container">
+          <AccountCircleIcon className="account-icon" />
+          <div className="bubble-wrapper">
+            <div className="comment-wrapper">
+              <a href="#" className="comment-name">
+                Olive Oyl
+              </a>
+              <p>
+                Nam atque repellendus animi perspiciatis, aliquid deserunt a
+                earum labore magnam voluptatum, ab possimus laudantium iste
+                ipsam quisquam repudiandae.
+              </p>
+            </div>
+          </div>
+          <div className="line-break"></div>
+          <div className="comment-engagememnt">
+            <a className="like" href="#">
               Like
             </a>
             <a className="reply" href="#">

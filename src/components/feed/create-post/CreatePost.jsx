@@ -17,7 +17,11 @@ export default function CreatePost() {
       <div className="card-footer">
         {createPostIcons.map(icon => {
           return (
-            <button key={icon.id} className="btn">
+            <button
+              onClick={() => setIsOpen(true)}
+              key={icon.id}
+              className="btn"
+            >
               <p>{icon.name}</p>
               <icon.icon className="icon" />
             </button>

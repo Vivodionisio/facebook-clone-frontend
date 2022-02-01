@@ -71,10 +71,11 @@
 .search-fb-field {
   display: none;
   background: none;
-  padding: 10px;
   padding-left: 0;
   border: none;
   outline: none;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .search-fb-wrapper .icon {
@@ -139,8 +140,6 @@ svg.css-i4bv87-MuiSvgIcon-root {
   margin-left: 25px;
   padding: 4px;
 }
-
-/* btn round */
 
 .btn-round {
   border: none;

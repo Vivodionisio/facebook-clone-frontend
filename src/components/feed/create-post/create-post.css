@@ -12,7 +12,9 @@
   border-radius: 1000px;
   flex-grow: 1;
   text-align: left;
-  padding: 1em;
+  padding: 0.7em;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 .create-post-btn.btn:hover {

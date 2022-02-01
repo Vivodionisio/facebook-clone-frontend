@@ -26,10 +26,11 @@
 .write-comment-field {
   width: 100%;
   background: none;
-  padding: 10px;
   border: none;
   outline: none;
-  padding-left: 1em;
+  padding: 0.7em;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .write-comment-pill-wrapper .icon {

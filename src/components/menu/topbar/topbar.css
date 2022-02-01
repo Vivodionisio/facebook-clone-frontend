@@ -23,7 +23,7 @@
 }
 
 .topbar-right {
-  justify-content: right;
+  justify-content: flex-end;
   position: absolute;
   right: 5px;
 }

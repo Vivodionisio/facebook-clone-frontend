@@ -79,10 +79,10 @@
 }
 
 .search-fb-wrapper .icon {
-  color: var(--medium);
   margin-left: 3px;
   padding: 0.2em;
   font-size: 1.3rem;
+  color: #6d6d6d;
 }
 
 /* main */
@@ -104,9 +104,12 @@
   margin-right: 5px;
 }
 
-svg.css-i4bv87-MuiSvgIcon-root {
-  font-size: 1.6rem;
+.topbar-main .btn-main svg {
+  font-size: 1.5rem;
 }
+/* svg.css-i4bv87-MuiSvgIcon-root {
+  font-size: 1.6rem;
+} */
 
 /* user page */
 .btn-user-page,

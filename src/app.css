@@ -1,1 +1,6 @@
 @import-normalize;
+/* import-normalise is a library and was actually loaded up with a bunch of other libraries when we ran create-react-app*/
+
+html {
+  font-size: 14px;
+}

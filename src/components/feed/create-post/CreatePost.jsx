@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './create-post.css'
 import FaceIcon from '@mui/icons-material/Face'
 import { createPostIcons } from '../../../assets/buttons/buttons'
+import Modal from './modal/Model'
 
 export default function CreatePost() {
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <div className="create-post card">
       <div className="card-header">
         <FaceIcon className="icon" />
-        <button className="create-post-btn btn">
+        <button onClick={() => setIsOpen(true)} className="create-post-btn btn">
           Whats on your mind, Jacamo?
         </button>
       </div>
@@ -22,6 +24,9 @@ export default function CreatePost() {
           )
         })}
       </div>
+      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+        Fancy Modal
+      </Modal>
     </div>
   )
 }

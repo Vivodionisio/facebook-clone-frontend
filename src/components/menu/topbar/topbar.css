@@ -89,7 +89,7 @@
 .btn-main {
   border: none;
   background: none;
-  color: rgb(75, 75, 75);
+  color: var(--medium);
   border-radius: 0.4em;
   width: 4.5em;
   height: 3.5em;
@@ -101,6 +101,10 @@
 
 .btn-main:not(.btn-main:last-child) {
   margin-right: 5px;
+}
+
+svg.css-i4bv87-MuiSvgIcon-root {
+  font-size: 1.6rem;
 }
 
 /* user page */

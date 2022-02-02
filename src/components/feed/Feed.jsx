@@ -1,33 +1,37 @@
-import React, { useState } from 'react'
+import React from 'react'
 import CreatePost from './create-post/CreatePost'
 import Post from './post/Post'
 import './feed.css'
-
-export const PostContext = React.createContext()
+import { PostData } from '../../assets/data/PostData'
 
 export default function Posts() {
-  const [isLiked, setIsLiked] = useState(false)
-  // const [like, setLike] = useState(likes)
+  // const [isLiked, setIsLiked] = useState(false)
+  // const [likes, setLikes] = useState()
 
-  const postContextValue = {
-    handleLikeClick
-  }
+  // const postContextValue = {
+  //   handleLikeClick,
+  //   handleLikesCount
+  // }
 
-  // function hanf
+  // function handleLikesCount(likes) {
+  //   console.log(likes)
+  //   setLikes(likes)
+  // }
 
-  function handleLikeClick(post) {
-    console.log(post)
-    console.log('handler clicked')
-    // setLike(isLiked ? like - 1 : like + 1)
-    setIsLiked(!isLiked)
-  }
+  // function handleLikeClick() {
+  //   console.log('handler clicked')
+  //   setLikes(isLiked ? likes - 1 : likes + 1)
+  //   setIsLiked(!isLiked)
+  // }
 
   return (
-    <PostContext.Provider value={postContextValue}>
-      <div className="feed-container">
-        <CreatePost />
-        <Post isLiked={isLiked} />
-      </div>
-    </PostContext.Provider>
+    <div className="feed-container">
+      <CreatePost />
+      {PostData.map(post => {
+        console.log(post.id)
+
+        return <Post key={post.id} post={post} />
+      })}
+    </div>
   )
 }

@@ -15,8 +15,6 @@ import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 
 export default function Topbar() {
-  // console.log(display)
-  console.log('hello')
   return (
     <div className="topbar-container">
       <div className="topbar-left">

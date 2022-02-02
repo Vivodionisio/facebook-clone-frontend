@@ -24,8 +24,6 @@ const contacts = [
   { id: 19, name: 'Jayleen Cantrell' }
 ]
 
-console.log(contacts)
-
 export default function SidebarRight() {
   return (
     <div className="sidebar-container sidebar-right">

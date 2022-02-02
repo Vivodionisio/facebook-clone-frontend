@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { PostContext } from '../Feed'
 import './feed-post.css'
 import './post-header.css'
 import './post-engagements.css'
@@ -19,15 +20,8 @@ import { PostData } from '../../../assets/data/PostData'
 
 console.log(PostData)
 
-export default function Post() {
-  // const [isLiked, setIsLiked] = useState(false)
-  // const [like, setLike] = useState(likes)
-  // const likeClickHandler = post => {
-  //   console.log(post)
-  //   console.log('handler clicked')
-  // setLike(isLiked ? like - 1 : like + 1)
-  // setIsLiked(!isLiked)
-  // }
+export default function Post({ isLiked }) {
+  const { handleLikeClick } = useContext(PostContext)
 
   return (
     <>
@@ -92,12 +86,13 @@ export default function Post() {
             {/* Like Comment Share */}
 
             <div className="card-footer">
-              <button className="btn">
-                <ThumbUpAltOutlinedIcon
-                  // onClick={() => likeClickHandler(post)}
-                  className="like-icon"
-                />
-                <ThumbUpIcon className="like-icon" />
+              <button onClick={() => handleLikeClick(post)} className="btn">
+                {isLiked ? (
+                  <ThumbUpIcon className="like-icon" />
+                ) : (
+                  <ThumbUpAltOutlinedIcon className="like-icon" />
+                )}
+
                 <p>Like</p>
               </button>
               <button className="btn">

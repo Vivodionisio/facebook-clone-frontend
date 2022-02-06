@@ -86,25 +86,25 @@ export default function Post({ post }) {
         <div className="wrapper engagements-wrapper">
           <div className="emojis-wrapper">
             {post.likeCategory.thumbsUp && (
-              <img src={thumb} alt="" className="joy-pixels-emoji" />
+              <img src={thumb} alt="" className="joy-pixels-emoji thumb" />
             )}
             {post.likeCategory.heart && (
-              <img src={heart} alt="" className="joy-pixels-emoji" />
+              <img src={heart} alt="" className="joy-pixels-emoji heart" />
             )}
             {post.likeCategory.care && (
-              <img src={care} alt="" className="joy-pixels-emoji" />
+              <img src={care} alt="" className="joy-pixels-emoji care" />
             )}
             {post.likeCategory.haha && (
-              <img src={haha} alt="" className="joy-pixels-emoji" />
-            )}
-            {post.likeCategory.sad && (
-              <img src={wow} alt="" className="joy-pixels-emoji" />
+              <img src={haha} alt="" className="joy-pixels-emoji haha" />
             )}
             {post.likeCategory.wow && (
-              <img src={sad} alt="" className="joy-pixels-emoji" />
+              <img src={wow} alt="" className="joy-pixels-emoji wow" />
+            )}
+            {post.likeCategory.sad && (
+              <img src={sad} alt="" className="joy-pixels-emoji sad" />
             )}
             {post.likeCategory.angry && (
-              <img src={angry} alt="" className="joy-pixels-emoji" />
+              <img src={angry} alt="" className="joy-pixels-emoji angry" />
             )}
 
             <span className="likes-count">{likes}</span>

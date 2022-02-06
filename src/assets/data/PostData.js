@@ -34,11 +34,11 @@ export const PostData = [
     likes: 32,
     likeCategory: {
       thumbsUp: true,
-      love: true,
-      care: true,
+      heart: true,
+      care: false,
       haha: true,
       sad: false,
-      wow: true,
+      wow: false,
       angry: false
     },
     userLike: {
@@ -60,10 +60,10 @@ export const PostData = [
     likes: 22,
     likeCategory: {
       thumbsUp: true,
-      love: true,
+      heart: true,
       care: false,
       haha: false,
-      sad: true,
+      sad: false,
       wow: false,
       angry: false
     },
@@ -80,16 +80,16 @@ export const PostData = [
     photo:
       'https://images.unsplash.com/photo-1619229724165-4792c82a8305?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80',
     date: '4 mins ago',
-    userName: 'Caterina Caselli',
+    userName: 'Eleanoora Rosenholm',
     userId: 12,
     likes: 3,
     likeCategory: {
       thumbsUp: true,
-      love: true,
+      heart: true,
       care: false,
       haha: false,
       sad: false,
-      wow: false,
+      wow: true,
       angry: false
     },
     userLike: {
@@ -108,7 +108,7 @@ export const PostData = [
     likes: 243,
     likeCategory: {
       thumbsUp: true,
-      love: true,
+      heart: true,
       care: false,
       haha: false,
       sad: true,

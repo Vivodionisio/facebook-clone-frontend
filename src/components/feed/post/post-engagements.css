@@ -92,6 +92,3 @@
   filter: grayscale(100%) brightness(80%);
   height: 1.2rem;
 }
-.joy-pixels-emoji:not(.joy-pixels-emoji:first-child) {
-  margin-left: -3px;
-}

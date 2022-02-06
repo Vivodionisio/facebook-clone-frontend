@@ -1,6 +1,43 @@
+.comments-wrapper.wrapper {
+  padding: 0;
+}
+.write-comment-wrapper {
+  border-top: 1px solid var(--medium-light);
+}
+
+.relevant-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  /* padding-bottom: 0.6em; */
+  padding: 0.6em 0;
+}
+
+.relevant-wrapper .relevant-list {
+  border: none;
+  outline: none;
+}
+
+.relevant-wrapper .btn,
+.comments-btn-wrapper .btn {
+  color: var(--medium);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.comments-btn-wrapper {
+  /* margin: 1rem 0; */
+  padding: 0.6em 0;
+}
+
+.comments-btn-wrapper .btn:hover {
+  text-decoration: underline;
+}
+
 .write-comment-container,
 .comment-bubble-container {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   /* align-items: center; */

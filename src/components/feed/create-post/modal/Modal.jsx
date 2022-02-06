@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDom from 'react-dom' // ReactDom has our portal method
 
 const MODAL_STYLES = {
   position: 'fixed',
-  top: '50%',
+  top: '45%',
   left: '50%',
+  width: '450px',
+  minWidth: '400px',
   transform: 'translate(-50%, -50%)',
   backgroundColor: '#fff',
-  padding: '50px',
+  boxShadow: '0 0 8px rgba(0, 0, 0, .2)',
+  borderRadius: '5px',
   zIndex: 1000
 }
 
@@ -17,17 +20,16 @@ const OVERLAY_STYLES = {
   left: 0,
   right: 0,
   bottom: 0,
-  backgroundColor: 'rgba(0, 0, 0, .7)',
+  backgroundColor: 'rgba(255, 255, 255, .7)',
   zIndex: 1000
 }
 
-export default function Modal({ open, children, onClose }) {
+export default function Modal({ open, children }) {
   if (!open) return null
   return ReactDom.createPortal(
     <>
       <div style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
-        <button onClick={onClose}>Close Modal</button>
         <div>{children}</div>
       </div>
     </>,

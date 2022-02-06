@@ -20,7 +20,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0.3em 0;
-  border-bottom: 1px solid var(--medium-light);
+  /* border-bottom: 1px solid var(--medium-light); */
   align-items: center;
 }
 .engagements-wrapper .emojis-wrapper .emoji {
@@ -55,27 +55,10 @@
   text-decoration: underline;
 }
 
-.relevant-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  padding-bottom: 0.6em;
-}
-
-.relevant-wrapper .relevant-list {
-  border: none;
-  outline: none;
-}
-
-.relevant-wrapper .btn {
-  color: var(--medium);
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-}
-
 .post-card .card-footer {
   padding: 0.2em 0;
-  border-bottom: 1px solid var(--medium-light);
+  border-top: 1px solid var(--medium-light);
+  position: relative;
 }
 
 .emojis-wrapper {
@@ -92,4 +75,23 @@
 
 .emojis-wrapper .likes-count:hover {
   text-decoration: underline;
+}
+
+.like-button-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 35px;
+  width: 50%;
+}
+
+.like-button-wrapper .btn.like-btn {
+  width: 100%;
+}
+
+.joy-pixels-emoji {
+  filter: grayscale(100%) brightness(80%);
+  height: 1.2rem;
+}
+.joy-pixels-emoji:not(.joy-pixels-emoji:first-child) {
+  margin-left: -3px;
 }

@@ -1,30 +1,45 @@
 import React, { useState } from 'react'
-import './feed-post.css'
+import './post.css'
 import './post-header.css'
 import './post-engagements.css'
 import './post-body.css'
-import './comments.css'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
 import MoreHorizRoundedIcon from '@mui/icons-material/MoreHorizRounded'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
-import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded'
-import MoodRoundedIcon from '@mui/icons-material/MoodRounded'
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined'
 import ThumbUpIcon from '@mui/icons-material/ThumbUp'
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline'
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined'
-import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded'
-import FaceIcon from '@mui/icons-material/Face'
+import Comments from './comments/Comments'
+import AnimatedEmojis from '../../shared/AnimatedEmojis'
+import thumb from '../../../assets/emoji-pngs/thumb.png'
+import heart from '../../../assets/emoji-pngs/heart.png'
+import care from '../../../assets/emoji-pngs/care.png'
+import haha from '../../../assets/emoji-pngs/haha.png'
+import wow from '../../../assets/emoji-pngs/wow.png'
+import sad from '../../../assets/emoji-pngs/sad.png'
+import angry from '../../../assets/emoji-pngs/angry.png'
 
 export default function Post({ post }) {
+  const [hoverState, setHoverState] = useState(true)
   const [isLiked, setIsLiked] = useState(false)
-  const [likes, setLike] = useState(post.likes)
+  const [likes, setLikes] = useState(post.likes)
   const handleLikeClick = () => {
     console.log(likes)
     console.log('handler clicked')
-    setLike(isLiked ? likes - 1 : likes + 1)
+    setLikes(isLiked ? likes - 1 : likes + 1)
     setIsLiked(!isLiked)
+    setHoverState(false)
   }
+  const handleEmojiVisibility = () => {
+    setHoverState(true)
+  }
+
+  const [showWriteComment, setShowWriteComment] = useState(false)
+  const handleShowWriteCommentClick = () => {
+    if (showWriteComment === false) setShowWriteComment(!showWriteComment)
+  }
+
   return (
     <>
       <div key={post.id} className="card post-card">
@@ -70,9 +85,28 @@ export default function Post({ post }) {
         {/* Tally */}
         <div className="wrapper engagements-wrapper">
           <div className="emojis-wrapper">
-            <FavoriteRoundedIcon className="emoji" />
-            <ThumbUpAltOutlinedIcon className="emoji" />
-            <MoodRoundedIcon className="emoji" />
+            {post.likeCategory.thumbsUp && (
+              <img src={thumb} alt="" className="joy-pixels-emoji" />
+            )}
+            {post.likeCategory.heart && (
+              <img src={heart} alt="" className="joy-pixels-emoji" />
+            )}
+            {post.likeCategory.care && (
+              <img src={care} alt="" className="joy-pixels-emoji" />
+            )}
+            {post.likeCategory.haha && (
+              <img src={haha} alt="" className="joy-pixels-emoji" />
+            )}
+            {post.likeCategory.sad && (
+              <img src={wow} alt="" className="joy-pixels-emoji" />
+            )}
+            {post.likeCategory.wow && (
+              <img src={sad} alt="" className="joy-pixels-emoji" />
+            )}
+            {post.likeCategory.angry && (
+              <img src={angry} alt="" className="joy-pixels-emoji" />
+            )}
+
             <span className="likes-count">{likes}</span>
           </div>
           <div>
@@ -88,16 +122,26 @@ export default function Post({ post }) {
         {/* Like Comment Share */}
 
         <div className="card-footer">
-          <button onClick={() => handleLikeClick()} className="btn">
-            {isLiked ? (
-              <ThumbUpIcon className="like-icon" />
+          <div className="like-button-wrapper">
+            <button
+              onClick={() => handleLikeClick()}
+              onMouseEnter={() => handleEmojiVisibility()}
+              className="btn like-btn"
+            >
+              {isLiked ? (
+                <ThumbUpIcon className="like-icon" />
+              ) : (
+                <ThumbUpAltOutlinedIcon className="like-icon" />
+              )}
+              <p>Like</p>
+            </button>
+            {hoverState ? (
+              <AnimatedEmojis classAnimatedEmojiBar="animated-emojis" />
             ) : (
-              <ThumbUpAltOutlinedIcon className="like-icon" />
+              <AnimatedEmojis classAnimatedEmojiBar="animated-emojis hide" />
             )}
-
-            <p>Like</p>
-          </button>
-          <button className="btn">
+          </div>
+          <button className="btn" onClick={handleShowWriteCommentClick}>
             <ChatBubbleOutlineIcon className="comment-icon" />
             <p>Comment</p>
           </button>
@@ -107,77 +151,10 @@ export default function Post({ post }) {
           </button>
         </div>
 
-        {/* <Comments /> */}
-
-        <div className="comments-wrapper wrapper">
-          <div className="relevant-wrapper">
-            <button className="btn">
-              Most relevant
-              <ArrowDropDownRoundedIcon />
-            </button>
-          </div>
-          <div className="write-comment-container">
-            <FaceIcon className="account-icon" />
-            <div className="write-comment-pill-wrapper">
-              <input
-                className="write-comment-field"
-                placeholder="Write a comment"
-              />
-            </div>
-          </div>
-          <div className="comment-bubble-container">
-            <AccountCircleIcon className="account-icon" />
-            <div className="bubble-wrapper">
-              <div className="comment-wrapper">
-                <a href="#" className="comment-name">
-                  Popeye
-                </a>
-                <p>Amet consectetur adipisicing...</p>
-              </div>
-            </div>
-            <div className="line-break"></div>
-            <div className="comment-engagememnt">
-              <a className="like" href="#">
-                Like
-              </a>
-              <a className="reply" href="#">
-                Reply
-              </a>
-              <a className="date" href="#">
-                1 h
-              </a>
-            </div>
-          </div>
-          <div className="comment-bubble-container">
-            <AccountCircleIcon className="account-icon" />
-            <div className="bubble-wrapper">
-              <div className="comment-wrapper">
-                <a href="#" className="comment-name">
-                  Olive Oyl
-                </a>
-                <p>
-                  Nam atque repellendus animi perspiciatis, aliquid deserunt a
-                  earum labore magnam voluptatum, ab possimus laudantium iste
-                  ipsam quisquam repudiandae.
-                </p>
-              </div>
-            </div>
-            <div className="line-break"></div>
-            <div className="comment-engagememnt">
-              <a className="like" href="#">
-                Like
-              </a>
-              <a className="reply" href="#">
-                Reply
-              </a>
-              <a className="date" href="#">
-                1 h
-              </a>
-            </div>
-          </div>
-        </div>
+        {/* Comments */}
+        <Comments showWriteComment={showWriteComment} />
       </div>
-      <div className="bottom"></div>
+      {/* <div className="bottom"></div> */}
     </>
   )
 }

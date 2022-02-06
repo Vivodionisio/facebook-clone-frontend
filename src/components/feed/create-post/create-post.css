@@ -27,3 +27,81 @@
   font-size: 1.5rem;
   color: var(--medium);
 }
+
+/* Modal Body */
+/* (modal header styles in modal componenent) */
+
+.modal-body-wrapper {
+  padding: 0.6em 0;
+  margin: 0 0.6em;
+}
+
+.modal .user-details-profile-icon {
+  font-size: 2.8rem;
+  margin-right: 10px;
+}
+
+.modal .user-details {
+  display: flex;
+  align-items: center;
+}
+.modal .user-details a {
+  text-decoration: none;
+  color: black;
+}
+
+.modal .post-input {
+  margin-left: 5px;
+  resize: none;
+  height: 100px;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 300;
+  border-bottom: var(--medium);
+}
+
+.modal .post-submit-btn {
+  font-size: 0.9rem;
+  width: 100%;
+  padding: 0.7em;
+  border-radius: 0.5em;
+  border: none;
+  color: lightgrey;
+}
+
+.modal-header-wrapper {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+}
+
+.modal-title {
+  font-size: 1.4rem;
+}
+
+.modal-close-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  borderradius: 50%;
+}
+
+.modal-close-btn-icon {
+  background-color: rgb(239, 239, 239);
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+  color: grey;
+  cursor: pointer;
+}
+
+.modal-close-btn-icon:hover {
+  background-color: rgb(219, 219, 219);
+}

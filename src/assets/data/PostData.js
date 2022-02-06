@@ -7,6 +7,19 @@ export const PostData = [
     userName: 'Joose Keskitalo',
     userId: 9,
     likes: 100,
+    likeCategory: {
+      thumbsUp: true,
+      heart: true,
+      care: false,
+      haha: false,
+      sad: false,
+      wow: false,
+      angry: false
+    },
+    userLike: {
+      select: false,
+      category: ''
+    },
     comments: '50 comments',
     online: false
   },
@@ -19,6 +32,19 @@ export const PostData = [
     userId: 12,
     userName: 'Andria Carvalho',
     likes: 32,
+    likeCategory: {
+      thumbsUp: true,
+      love: true,
+      care: true,
+      haha: true,
+      sad: false,
+      wow: true,
+      angry: false
+    },
+    userLike: {
+      select: true,
+      category: 'haha'
+    },
     shares: '72 shares',
     comments: '1k comments',
     online: true
@@ -32,6 +58,19 @@ export const PostData = [
     userName: 'Crazy A',
     userId: 12,
     likes: 22,
+    likeCategory: {
+      thumbsUp: true,
+      love: true,
+      care: false,
+      haha: false,
+      sad: true,
+      wow: false,
+      angry: false
+    },
+    userLike: {
+      select: false,
+      category: ''
+    },
     shares: '9 shares',
     comments: '19 comments',
     online: true
@@ -44,6 +83,19 @@ export const PostData = [
     userName: 'Caterina Caselli',
     userId: 12,
     likes: 3,
+    likeCategory: {
+      thumbsUp: true,
+      love: true,
+      care: false,
+      haha: false,
+      sad: false,
+      wow: false,
+      angry: false
+    },
+    userLike: {
+      select: false,
+      category: ''
+    },
     comments: '1 comment',
     online: true
   },
@@ -54,6 +106,19 @@ export const PostData = [
     userName: 'Jacob de Zoet',
     userId: 12,
     likes: 243,
+    likeCategory: {
+      thumbsUp: true,
+      love: true,
+      care: false,
+      haha: false,
+      sad: true,
+      wow: true,
+      angry: true
+    },
+    userLike: {
+      select: false,
+      category: ''
+    },
     shares: '31 shares',
     comments: '200 comments',
     online: false

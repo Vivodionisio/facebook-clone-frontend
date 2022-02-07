@@ -3,9 +3,9 @@ import './button.css'
 
 export default function Button({ children, version, isDisabled }) {
   return (
-    <Button disabled={isDisabled} className={`btn-basic`}>
+    <button disabled={isDisabled} className={`btn-basic`}>
       {children}
-    </Button>
+    </button>
   )
 }
 

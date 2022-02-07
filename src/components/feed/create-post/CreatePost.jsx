@@ -8,20 +8,21 @@ import Button from '../../shared/Button'
 
 export default function CreatePost() {
   const [isOpen, setIsOpen] = useState(false)
+  const [btnDisabled, setBtnDisabled] = useState(true)
+
   function onClose() {
     setIsOpen(false)
+    setBtnDisabled(true)
   }
 
-  const [btnDisabled, setBtnDisabled] = useState(true)
-  const [text, setText] = useState('')
   const handleTextChange = e => {
-    console.log(e.target.value)
-    if (text.trim().length === '') {
+    if (e.target.value.length === 0) {
+      console.log('disabled')
       setBtnDisabled(true)
     } else {
+      console.log('not disabled')
       setBtnDisabled(false)
     }
-    setText(e.target.value)
   }
 
   return (
@@ -48,7 +49,6 @@ export default function CreatePost() {
       </div>
       <Modal open={isOpen}>
         <div className="modal-header-wrapper">
-          <div></div>
           <h1 className="modal-title">Create Post</h1>
           <button className="modal-close-btn" onClick={onClose}>
             <CloseRoundedIcon className="modal-close-btn-icon" />
@@ -68,14 +68,14 @@ export default function CreatePost() {
             onChange={handleTextChange}
             name="write-post"
             id="writePost"
+            autoFocus
             placeholder={`What's on your mind, Jacamo?`}
             className="post-input"
-            value={text}
           ></textarea>
-          <button className="post-submit-btn" type="submit">
+
+          <Button type="submit" isDisabled={btnDisabled}>
             Post
-          </button>
-          {/* <Button>Hi</Button> */}
+          </Button>
         </form>
       </Modal>
     </div>

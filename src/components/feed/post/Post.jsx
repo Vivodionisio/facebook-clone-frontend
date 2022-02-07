@@ -154,7 +154,6 @@ export default function Post({ post }) {
         {/* Comments */}
         <Comments showWriteComment={showWriteComment} />
       </div>
-      {/* <div className="bottom"></div> */}
     </>
   )
 }

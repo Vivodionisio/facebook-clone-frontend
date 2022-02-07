@@ -4,12 +4,24 @@ import FaceIcon from '@mui/icons-material/Face'
 import { createPostIcons } from '../../../assets/buttons/buttons'
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
 import Modal from './modal/Modal'
+import Button from '../../shared/Button'
 
 export default function CreatePost() {
   const [isOpen, setIsOpen] = useState(false)
-
   function onClose() {
     setIsOpen(false)
+  }
+
+  const [btnDisabled, setBtnDisabled] = useState(true)
+  const [text, setText] = useState('')
+  const handleTextChange = e => {
+    console.log(e.target.value)
+    if (text.trim().length === '') {
+      setBtnDisabled(true)
+    } else {
+      setBtnDisabled(false)
+    }
+    setText(e.target.value)
   }
 
   return (
@@ -53,14 +65,17 @@ export default function CreatePost() {
           </div>
 
           <textarea
+            onChange={handleTextChange}
             name="write-post"
             id="writePost"
             placeholder={`What's on your mind, Jacamo?`}
             className="post-input"
+            value={text}
           ></textarea>
           <button className="post-submit-btn" type="submit">
             Post
           </button>
+          {/* <Button>Hi</Button> */}
         </form>
       </Modal>
     </div>

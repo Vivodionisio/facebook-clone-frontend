@@ -89,13 +89,5 @@
 }
 
 .joy-pixels-emoji {
-  filter: grayscale(100%) brightness(80%);
   height: 1.2rem;
-}
-
-.joy-pixels-emoji.angry {
-  filter: grayscale(1) brightness(1.1) contrast(1);
-}
-.joy-pixels-emoji.heart {
-  filter: grayscale(100%) brightness(130%);
 }

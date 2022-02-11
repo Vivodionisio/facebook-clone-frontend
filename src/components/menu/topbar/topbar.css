@@ -94,6 +94,7 @@
   border-radius: 0.4em;
   width: 4.5em;
   height: 3.5em;
+  line-height: 0.7rem;
 }
 
 .btn-main:hover {
@@ -128,9 +129,11 @@
   align-items: center;
   border-radius: 1000px;
   padding-right: 0.5em;
+  color: black;
+  text-decoration: none;
 }
 .btn-user-page .icon {
-  font-size: 34px;
+  font-size: 32px;
   position: absolute;
   left: 2px;
 }
@@ -140,8 +143,10 @@
 }
 
 .btn-user-page span {
-  margin-left: 25px;
-  padding: 4px;
+  margin-left: 20px;
+  padding: 0.1em;
+  padding-right: 4px;
+  font-size: 14px;
 }
 
 .btn-round {
@@ -187,21 +192,23 @@
 }
 @media screen and (min-width: 990px) {
   .topbar-main .btn:not(.topbar-main .btn:last-child) {
-    display: inline-block;
+    display: flex;
+    height: 46px;
+    align-self: center;
   }
 
   .topbar-container {
     justify-content: space-between;
   }
-  .btn-main {
-    width: 10em;
+  .btn-main:not(.nav-btn) {
+    width: 100%;
   }
 
   .topbar-main {
     width: 42%;
     justify-content: space-between;
     display: flex;
-    justify-content: right;
+    /* justify-content: right; */
   }
 
   .topbar-right {
@@ -210,4 +217,28 @@
   .topbar-left {
     width: 22%;
   }
+
+  .topbar-main .btn-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.main-activated {
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.topbar-main .btn.main-activated:hover {
+  background-color: transparent;
+}
+
+.main-activated::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  position: absolute;
+  top: 48px;
 }

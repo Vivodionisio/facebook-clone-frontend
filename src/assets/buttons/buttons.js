@@ -17,7 +17,7 @@ import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternate
 import MoodIcon from '@mui/icons-material/Mood'
 
 export const sideIcons = [
-  { id: 1, icon: FaceRoundedIcon, name: 'Jacamo Flys' },
+  { id: 1, icon: FaceRoundedIcon, name: 'Jacamo' },
   { id: 2, icon: PeopleAltRoundedIcon, name: 'Friends' },
   { id: 3, icon: GroupWorkRoundedIcon, name: 'Groups' },
   { id: 4, icon: StorefrontRoundedIcon, name: 'Marketplace' },

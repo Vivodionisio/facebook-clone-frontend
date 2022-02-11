@@ -13,7 +13,9 @@ export default function SidebarLeft() {
             return (
               <button key={sideIcon.id} className="btn">
                 <sideIcon.icon className="icon" />
-                <span className="name">{sideIcon.name}</span>
+                <span className="name side-bar-right-btn-name">
+                  {sideIcon.name}
+                </span>
               </button>
             )
           })}
@@ -28,7 +30,9 @@ export default function SidebarLeft() {
             return (
               <button key={sideIcon.id} className="btn">
                 <sideIcon.icon className="icon"></sideIcon.icon>
-                <span className="name">{sideIcon.name}</span>
+                <span className="name side-bar-right-btn-name">
+                  {sideIcon.name}
+                </span>
               </button>
             )
           })}

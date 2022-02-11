@@ -42,6 +42,10 @@
   font-size: 2.6rem;
 }
 
+.sidebar-container .side-bar-right-btn-name {
+  font-size: 13.33px;
+}
+
 .btn-see-more {
   margin-bottom: 5px;
 }

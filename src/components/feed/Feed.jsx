@@ -9,8 +9,6 @@ export default function Posts() {
     <div className="feed-container">
       <CreatePost />
       {PostData.map(post => {
-        console.log(post.id)
-
         return <Post key={post.id} post={post} />
       })}
     </div>

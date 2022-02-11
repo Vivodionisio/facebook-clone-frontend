@@ -28,6 +28,7 @@ export default function Comments({ showWriteComment }) {
                 <input
                   className="write-comment-field"
                   placeholder="Write a comment"
+                  autoFocus
                 />
               </div>
             </div>

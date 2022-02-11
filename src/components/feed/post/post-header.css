@@ -7,8 +7,8 @@
   position: absolute;
   left: 1.7rem;
   top: 2.3rem;
-  height: 0.6em;
-  width: 0.6em;
+  height: 0.8em;
+  width: 0.8em;
   background-color: green;
   border: 2px solid white;
   border-radius: 50%;
@@ -64,6 +64,7 @@
 .options-wrapper .options-icon {
   padding: 0.2em;
   border-radius: 50%;
+  font-size: 2.2rem;
 }
 .options-wrapper .options-icon:hover {
   background-color: var(--light);

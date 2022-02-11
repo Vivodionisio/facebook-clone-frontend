@@ -35,7 +35,7 @@ export default function SidebarRight() {
           return (
             <button key={id} className="btn">
               <AccountCircleIcon className="icon" />
-              <span>{contact}</span>
+              <span className="side-bar-right-btn-name">{contact}</span>
             </button>
           )
         })}

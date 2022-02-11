@@ -16,33 +16,14 @@ import ChatBubbleIcon from '@mui/icons-material/ChatBubble'
 import NotificationsIcon from '@mui/icons-material/Notifications'
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded'
 import OndemandVideoTwoToneIcon from '@mui/icons-material/OndemandVideoTwoTone'
+import PersonalVideoRoundedIcon from '@mui/icons-material/PersonalVideoRounded'
 
 import { NavLink } from 'react-router-dom'
 
 export default function Topbar() {
-  const activeArr = [
-    { id: 1, active: false },
-    { id: 2, active: false },
-    { id: 3, active: false },
-    { id: 4, active: false }
-  ]
-
-  const handleClickMain = e => {
-    const id =
-      parseInt(e.target.id) || parseInt(e.target.closest('.btn-main').id)
-    const found = activeArr.find(a => a.id === id)
-    const inactive = activeArr.filter(ia => ia.id !== id)
-
-    inactive.forEach(a => {
-      a.active = false
-      console.log(a.active)
-    })
-    if (found) {
-      found.active = true
-      console.log(activeArr)
-      console.log(found.active)
-      console.log(activeArr[0].active) // returns true
-    }
+  const [activeId, setActive] = useState('')
+  function newActive(e) {
+    setActive(e.target.id)
   }
 
   return (
@@ -63,13 +44,13 @@ export default function Topbar() {
           className={({ isActive }) =>
             'btn btn-main' + (isActive ? ' main-activated' : '')
           }
-          id={1}
-          onClick={e => handleClickMain(e)}
+          id="home"
+          onClick={e => newActive(e)}
         >
-          {activeArr[0].active ? (
-            <CottageOutlinedIcon />
-          ) : (
+          {activeId === 'home' ? (
             <CottageRoundedIcon />
+          ) : (
+            <CottageOutlinedIcon />
           )}
         </NavLink>
 
@@ -78,15 +59,14 @@ export default function Topbar() {
           className={({ isActive }) =>
             'btn btn-main' + (isActive ? ' main-activated' : '')
           }
-          id={1}
-          onClick={e => handleClickMain(e)}
+          id="video"
+          onClick={e => newActive(e)}
         >
-          {/* {activeArr.id === 1 && activeArr.active ? (
-            <OndemandVideoTwoToneIcon />
-          ) : (
+          {activeId === 'video' ? (
             <OndemandVideoOutlinedIcon />
-          )} */}
-          <OndemandVideoOutlinedIcon />
+          ) : (
+            <PersonalVideoRoundedIcon />
+          )}
         </NavLink>
         <NavLink to="/store" className="btn btn-main">
           <StorefrontOutlinedIcon />
@@ -115,8 +95,6 @@ export default function Topbar() {
           className={({ isActive }) =>
             'btn btn-user-page' + (isActive ? ' profile-activated' : '')
           }
-          onClick={e => handleClickMain(e)}
-          id={5}
         >
           <FaceIcon className="icon" />
           <span>Jacamo</span>

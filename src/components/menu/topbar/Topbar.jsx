@@ -7,7 +7,6 @@ import OndemandVideoOutlinedIcon from '@mui/icons-material/OndemandVideoOutlined
 import CottageRoundedIcon from '@mui/icons-material/CottageRounded'
 import CottageOutlinedIcon from '@mui/icons-material/CottageOutlined'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
-
 import FaceIcon from '@mui/icons-material/Face'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
@@ -15,16 +14,12 @@ import GrainRoundedIcon from '@mui/icons-material/GrainRounded'
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble'
 import NotificationsIcon from '@mui/icons-material/Notifications'
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded'
-import OndemandVideoTwoToneIcon from '@mui/icons-material/OndemandVideoTwoTone'
 import PersonalVideoRoundedIcon from '@mui/icons-material/PersonalVideoRounded'
 
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 export default function Topbar() {
-  const [activeId, setActive] = useState('')
-  function newActive(e) {
-    setActive(e.target.id)
-  }
+  const location = useLocation()
 
   return (
     <div className="topbar-container">
@@ -44,10 +39,8 @@ export default function Topbar() {
           className={({ isActive }) =>
             'btn btn-main' + (isActive ? ' main-activated' : '')
           }
-          id="home"
-          onClick={e => newActive(e)}
         >
-          {activeId === 'home' ? (
+          {location.pathname === '/' ? (
             <CottageRoundedIcon />
           ) : (
             <CottageOutlinedIcon />
@@ -59,13 +52,11 @@ export default function Topbar() {
           className={({ isActive }) =>
             'btn btn-main' + (isActive ? ' main-activated' : '')
           }
-          id="video"
-          onClick={e => newActive(e)}
         >
-          {activeId === 'video' ? (
-            <OndemandVideoOutlinedIcon />
-          ) : (
+          {location.pathname === '/' ? (
             <PersonalVideoRoundedIcon />
+          ) : (
+            <OndemandVideoOutlinedIcon />
           )}
         </NavLink>
         <NavLink to="/store" className="btn btn-main">

@@ -102,7 +102,7 @@
 }
 
 .btn-main:not(.btn-main:last-child) {
-  margin-right: 5px;
+  margin-right: 15px;
 }
 
 .topbar-main .btn-main svg {

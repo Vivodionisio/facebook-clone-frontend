@@ -14,8 +14,30 @@
   align-items: stretch;
 }
 
-.sidebar-container .section-1 {
-  /* border-bottom: 1px solid lightgrey; */
+.sidebar-left-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 35px;
+  width: 50px;
+}
+
+.sidebar-container.sidebar-left .icon {
+  font-size: 2.2rem;
+}
+.sidebar-container.sidebar-left
+  .btn:first-child
+  .sidebar-left-icon-container
+  .icon {
+  position: absolute;
+  width: 42px;
+  font-size: 2.6rem;
+}
+
+.sidebar-container .btn.bookmark-profile {
+  text-decoration: none;
+  color: black;
 }
 
 .sidebar-container .btn {
@@ -36,14 +58,15 @@
 
 .sidebar-container .icon {
   margin-right: 10px;
-  font-size: 2.8rem;
-}
-.sidebar-container.sidebar-left .icon {
   font-size: 2.6rem;
 }
 
+/* .sidebar-container.sidebar-left .btn:first-child .icon {
+  font-size: 2.6rem;
+} */
+
 .sidebar-container .side-bar-right-btn-name {
-  font-size: 13.33px;
+  font-size: 15px;
 }
 
 .btn-see-more {

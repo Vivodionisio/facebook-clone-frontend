@@ -1,12 +1,14 @@
 import React from 'react'
 import '../home/home.css'
 import Topbar from '../../components/menu/topbar/Topbar'
+import NoPlace from '../../components/shared/NoPlace'
 
-export default function Video() {
+export default function Groups() {
   return (
     <>
       <div className="topbar-fixed">
         <Topbar />
+        <NoPlace />
       </div>
     </>
   )

@@ -3,7 +3,7 @@ import './create-post.css'
 import FaceIcon from '@mui/icons-material/Face'
 import { createPostIcons } from '../../../assets/buttons/buttons'
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
-import Modal from './modal/Modal'
+import Modal from './Modal'
 import Button from '../../shared/Button'
 
 export default function CreatePost() {

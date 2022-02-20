@@ -1,12 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './topbar.css'
-import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined'
-import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined'
-import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined'
-import OndemandVideoOutlinedIcon from '@mui/icons-material/OndemandVideoOutlined'
-import CottageRoundedIcon from '@mui/icons-material/CottageRounded'
-import CottageOutlinedIcon from '@mui/icons-material/CottageOutlined'
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 import FaceIcon from '@mui/icons-material/Face'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
@@ -14,19 +7,57 @@ import GrainRoundedIcon from '@mui/icons-material/GrainRounded'
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble'
 import NotificationsIcon from '@mui/icons-material/Notifications'
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded'
-import PersonalVideoRoundedIcon from '@mui/icons-material/PersonalVideoRounded'
-
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
+import {
+  HomeFilled,
+  HomeOutline,
+  WatchFilled,
+  WatchOutline,
+  GroupsFilled,
+  GroupsOutline,
+  StoreFilled,
+  StoreOutline,
+  GamingFilled,
+  GamingOutline
+} from '../../../assets/images/nav-link-svgs/nav-link-svgs'
+// import HomeFilled from '../../../assets/images/nav-link-svgs/home-filled'
 import { NavLink, useLocation } from 'react-router-dom'
+
+const navLinkIcons = new Map([
+  ['/', [HomeFilled, HomeOutline]],
+  ['/video', [WatchFilled, WatchOutline]],
+  ['/store', [StoreFilled, StoreOutline]],
+  ['/groups', [GroupsFilled, GroupsOutline]],
+  ['/gaming', [GamingFilled, GamingOutline]],
+  ['/bookmarks', [MenuRoundedIcon, MenuRoundedIcon]]
+])
 
 export default function Topbar() {
   const location = useLocation()
 
+  function MyNavLink({ children, to, ...props }) {
+    const icons = navLinkIcons.get(to),
+      RoundedIcon = icons[0],
+      OutlinedIcon = icons[1]
+    return (
+      <NavLink
+        to={to}
+        className={({ isActive }) =>
+          'btn btn-main' + (isActive ? ' main-activated' : '')
+        }
+        {...props}
+      >
+        {location.pathname === to ? <RoundedIcon /> : <OutlinedIcon />}
+      </NavLink>
+    )
+  }
+
   return (
     <div className="topbar-container">
       <div className="topbar-left">
-        <button className="logo btn">
+        <NavLink className="logo btn" to="/">
           <FacebookOutlinedIcon className="icon" />
-        </button>
+        </NavLink>
         <div className="search-fb-wrapper">
           <SearchOutlinedIcon className="icon" />
           <input className="search-fb-field" placeholder="Search Facebook" />
@@ -34,50 +65,12 @@ export default function Topbar() {
       </div>
 
       <div className="topbar-main">
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            'btn btn-main' + (isActive ? ' main-activated' : '')
-          }
-        >
-          {location.pathname === '/' ? (
-            <CottageRoundedIcon />
-          ) : (
-            <CottageOutlinedIcon />
-          )}
-        </NavLink>
-
-        <NavLink
-          to="/video"
-          className={({ isActive }) =>
-            'btn btn-main' + (isActive ? ' main-activated' : '')
-          }
-        >
-          {location.pathname === '/' ? (
-            <PersonalVideoRoundedIcon />
-          ) : (
-            <OndemandVideoOutlinedIcon />
-          )}
-        </NavLink>
-        <NavLink to="/store" className="btn btn-main">
-          <StorefrontOutlinedIcon />
-        </NavLink>
-        <NavLink to="/groups" className="btn btn-main">
-          <GroupsOutlinedIcon />
-        </NavLink>
-        <NavLink to="/gaming" className="btn btn-main">
-          <SportsEsportsOutlinedIcon />
-        </NavLink>
-        <button
-          // onClick={() =>
-          //   setDisplay(prevDisplay => {
-          //     return prevDisplay === 'none' ? 'block' : 'none'
-          //   })
-          // }
-          className="btn btn-main"
-        >
-          <MenuRoundedIcon />
-        </button>
+        <MyNavLink to="/" />
+        <MyNavLink to="/video" />
+        <MyNavLink to="/store" />
+        <MyNavLink to="/groups" />
+        <MyNavLink to="/gaming" />
+        <MyNavLink to="/bookmarks" />
       </div>
 
       <div className="topbar-right">
@@ -107,6 +100,6 @@ export default function Topbar() {
   )
 }
 
-Topbar.defaultProps = {
-  mainActivated: false
-}
+// Topbar.defaultProps = {
+//   mainActivated: false
+// }

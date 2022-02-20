@@ -51,6 +51,7 @@
   border: none;
   margin-left: 3px;
   margin-right: 5px;
+  color: black;
 }
 
 .logo .icon {
@@ -108,9 +109,14 @@
 .topbar-main .btn-main svg {
   font-size: 1.7rem;
 }
-/* svg.css-i4bv87-MuiSvgIcon-root {
-  font-size: 1.6rem;
-} */
+
+.btn-main:last-child:not(.nav-btn) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  width: 50px;
+}
 
 /* user page */
 .btn-user-page,
@@ -146,7 +152,8 @@
   margin-left: 20px;
   padding: 0.1em;
   padding-right: 4px;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .btn-round {
@@ -201,11 +208,11 @@
     justify-content: space-between;
   }
   .btn-main:not(.nav-btn) {
-    width: 100%;
+    width: 100% !important;
   }
 
   .topbar-main {
-    width: 42%;
+    width: 44%;
     justify-content: space-between;
     display: flex;
     /* justify-content: right; */
@@ -240,5 +247,23 @@
   height: 4px;
   background-color: black;
   position: absolute;
-  top: 48px;
+  top: 47px;
+}
+
+.profile-activated {
+  background: rgb(239, 239, 239);
+  color: rgb(0, 0, 0);
+}
+.profile-activated:hover {
+  background: rgb(239, 239, 239);
+  color: rgb(0, 0, 0);
+}
+
+.nav-link-svgs {
+  height: 28px;
+  width: 28px;
+}
+
+.nav-link-svgs.outline path {
+  fill: #666666;
 }

@@ -25,6 +25,6 @@ div.feed-container .post-card:last-child {
 @media screen and (min-width: 1100px) {
   div.feed-container {
     margin: 60px auto 0;
-    max-width: 42%;
+    max-width: 44%;
   }
 }

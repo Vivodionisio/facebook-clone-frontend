@@ -1,18 +1,9 @@
-.filtered {
-  /* -webkit-filter: grayscale(100%); */
-  /* filter: grayscale(100%); */
-}
-
 .animated-emojis {
-  /* position: absolute;
-  top: -4px;
-  left: 0; */
   display: flex;
   box-shadow: 0 0 15px -5px var(--medium);
   background: white;
   border: 1px solid var(--medium-light);
   border-radius: 1000px;
-  /* transition: top 0.5s; */
 }
 
 .animated-emojis {

@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 import './post.css'
-import './post-header.css'
-import './post-engagements.css'
-import './post-body.css'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
 import MoreHorizRoundedIcon from '@mui/icons-material/MoreHorizRounded'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'

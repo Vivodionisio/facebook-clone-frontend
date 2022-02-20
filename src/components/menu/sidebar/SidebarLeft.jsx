@@ -3,6 +3,7 @@ import './sidebar.css'
 import { sideIcons } from '../../../assets/buttons/buttons'
 import { sideIcons2 } from '../../../assets/buttons/buttons'
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded'
+import { Link } from 'react-router-dom'
 
 export default function SidebarLeft() {
   return (
@@ -10,14 +11,33 @@ export default function SidebarLeft() {
       <div className="sidebar-container sidebar-left">
         <div className="section-1">
           {sideIcons.map(sideIcon => {
-            return (
-              <button key={sideIcon.id} className="btn">
-                <sideIcon.icon className="icon" />
-                <span className="name side-bar-right-btn-name">
-                  {sideIcon.name}
-                </span>
-              </button>
-            )
+            if (sideIcon.id === 1) {
+              return (
+                <Link
+                  to="/profile/:userName"
+                  key={sideIcon.id}
+                  className="btn bookmark-profile"
+                >
+                  <div className="sidebar-left-icon-container">
+                    <sideIcon.icon className="icon" />
+                  </div>
+                  <span className="name side-bar-right-btn-name">
+                    {sideIcon.name}
+                  </span>
+                </Link>
+              )
+            } else {
+              return (
+                <button key={sideIcon.id} className="btn">
+                  <div className="sidebar-left-icon-container">
+                    <sideIcon.icon className="icon" />
+                  </div>
+                  <span className="name side-bar-right-btn-name">
+                    {sideIcon.name}
+                  </span>
+                </button>
+              )
+            }
           })}
           <button className="btn btn-see-more">
             <KeyboardArrowDownRoundedIcon className="icon" />
@@ -29,7 +49,9 @@ export default function SidebarLeft() {
           {sideIcons2.map(sideIcon => {
             return (
               <button key={sideIcon.id} className="btn">
-                <sideIcon.icon className="icon"></sideIcon.icon>
+                <div className="sidebar-left-icon-container">
+                  <sideIcon.icon className="icon"></sideIcon.icon>
+                </div>
                 <span className="name side-bar-right-btn-name">
                   {sideIcon.name}
                 </span>

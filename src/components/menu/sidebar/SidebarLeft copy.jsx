@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 export default function SidebarLeft() {
   return (
     <>
-      <div className="sidebar left">
+      <div className="sidebar-container sidebar-left">
         <div className="section-1">
           {sideIcons.map(sideIcon => {
             if (sideIcon.id === 1) {
@@ -16,9 +16,9 @@ export default function SidebarLeft() {
                 <Link
                   to="/profile/:userName"
                   key={sideIcon.id}
-                  className="btn bookmark-user"
+                  className="btn bookmark-profile"
                 >
-                  <div className="container">
+                  <div className="sidebar-left-icon-container">
                     <sideIcon.icon className="icon" />
                   </div>
                   <span className="name side-bar-right-btn-name">
@@ -29,7 +29,7 @@ export default function SidebarLeft() {
             } else {
               return (
                 <button key={sideIcon.id} className="btn">
-                  <div className="container">
+                  <div className="sidebar-left-icon-container">
                     <sideIcon.icon className="icon" />
                   </div>
                   <span className="name side-bar-right-btn-name">
@@ -52,12 +52,14 @@ export default function SidebarLeft() {
                 <div className="sidebar-left-icon-container">
                   <sideIcon.icon className="icon"></sideIcon.icon>
                 </div>
-                <span className="name">{sideIcon.name}</span>
+                <span className="name side-bar-right-btn-name">
+                  {sideIcon.name}
+                </span>
               </button>
             )
           })}
         </div>
-        <div className="bottom"></div>
+        <div className="sidebar-bottom"></div>
       </div>
     </>
   )

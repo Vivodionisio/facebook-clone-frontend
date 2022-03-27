@@ -26,7 +26,7 @@ const contacts = [
 
 export default function SidebarRight() {
   return (
-    <div className="sidebar right">
+    <div className="sidebar-container sidebar-right">
       <div className="section-1">
         <h3>Contacts</h3>
         {contacts.map(c => {
@@ -35,12 +35,12 @@ export default function SidebarRight() {
           return (
             <button key={id} className="btn">
               <AccountCircleIcon className="icon" />
-              <span className="name">{contact}</span>
+              <span className="side-bar-right-btn-name">{contact}</span>
             </button>
           )
         })}
       </div>
-      <div className="bottom"></div>
+      <div className="sidebar-bottom"></div>
     </div>
   )
 }

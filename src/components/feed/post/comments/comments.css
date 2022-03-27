@@ -40,14 +40,12 @@
   padding-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
-  /* align-items: center; */
 }
 
 .write-comment-container .account-icon,
 .comment-bubble-container .account-icon {
   margin-right: 10px;
   font-size: 2.2rem;
-  /* align-self: flex-start; */
 }
 
 .write-comment-pill-wrapper {
@@ -128,7 +126,3 @@
 .comment-engagememnt a:hover {
   text-decoration: underline;
 }
-
-/* .comment-engagememnt:not(a:last-child) {
-  margin-right: 10px;
-} */

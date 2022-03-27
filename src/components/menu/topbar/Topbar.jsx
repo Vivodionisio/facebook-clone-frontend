@@ -1,5 +1,5 @@
 import React from 'react'
-import './topbar.css'
+import './topbar.scss'
 import FaceIcon from '@mui/icons-material/Face'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
@@ -20,7 +20,6 @@ import {
   GamingFilled,
   GamingOutline
 } from '../../../assets/images/nav-link-svgs/nav-link-svgs'
-// import HomeFilled from '../../../assets/images/nav-link-svgs/home-filled'
 import { NavLink, useLocation } from 'react-router-dom'
 
 const navLinkIcons = new Map([
@@ -43,7 +42,7 @@ export default function Topbar() {
       <NavLink
         to={to}
         className={({ isActive }) =>
-          'btn btn-main' + (isActive ? ' main-activated' : '')
+          'btn btn-main' + (isActive ? ' activated' : '')
         }
         {...props}
       >
@@ -53,18 +52,18 @@ export default function Topbar() {
   }
 
   return (
-    <div className="topbar-container">
-      <div className="topbar-left">
+    <div className="Topbar">
+      <div className="left">
         <NavLink className="logo btn" to="/">
           <FacebookOutlinedIcon className="icon" />
         </NavLink>
-        <div className="search-fb-wrapper">
+        <div className="search-fb-container">
           <SearchOutlinedIcon className="icon" />
           <input className="search-fb-field" placeholder="Search Facebook" />
         </div>
       </div>
 
-      <div className="topbar-main">
+      <div className="main">
         <MyNavLink to="/" />
         <MyNavLink to="/video" />
         <MyNavLink to="/store" />
@@ -73,33 +72,29 @@ export default function Topbar() {
         <MyNavLink to="/bookmarks" />
       </div>
 
-      <div className="topbar-right">
+      <div className="right">
         <NavLink
           to="/profile/:userName"
           className={({ isActive }) =>
-            'btn btn-user-page' + (isActive ? ' profile-activated' : '')
+            'btn btn-user' + (isActive ? ' activated' : '')
           }
         >
           <FaceIcon className="icon" />
           <span>Jacamo</span>
         </NavLink>
-        <button className="btn btn-round">
+        <button className="btn round">
           <GrainRoundedIcon className="icon" />
         </button>
-        <button className="btn btn-round">
+        <button className="btn round">
           <ChatBubbleIcon className="icon" />
         </button>
-        <button className="btn btn-round">
+        <button className="btn round">
           <NotificationsIcon className="icon" />
         </button>
-        <button className="btn btn-round">
+        <button className="btn round">
           <ArrowDropDownRoundedIcon className="icon" />
         </button>
       </div>
     </div>
   )
 }
-
-// Topbar.defaultProps = {
-//   mainActivated: false
-// }

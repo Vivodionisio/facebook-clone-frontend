@@ -60,6 +60,7 @@
   border: none;
   outline: none;
 }
+
 .login-container form input[type='submit'] {
   margin-bottom: 0;
   cursor: pointer;
@@ -132,4 +133,64 @@
     align-self: flex-start;
     text-align: left;
   }
+}
+
+/* Sing up form */
+
+.signup-form {
+  padding: 0.8em 0;
+  margin: 0 0.8em;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 0.8em;
+  border-radius: 0.5em;
+  font-size: 0.9rem;
+  outline: none;
+  border: 1px solid rgb(223, 223, 223);
+  margin-bottom: 15px;
+}
+.signup-form input::placeholder {
+  color: rgb(117, 117, 117);
+}
+.signup-form input:focus {
+  outline: 1px solid rgb(238, 238, 238);
+}
+
+.signup-form button.btn-basic {
+  padding: 0.8em;
+  background-color: black;
+}
+
+.signup-form button.btn-basic:hover {
+  background-color: rgb(37, 37, 37);
+}
+
+.password-field-container {
+  position: relative;
+}
+
+.password-field-container .visibility-btn {
+  position: absolute;
+  display: flex;
+  top: 0.55em;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: grey;
+}
+
+/* Form Error Messages */
+
+.signup-form .input-error {
+  border: 1px solid red;
+  margin-bottom: 5px;
+}
+
+.form-message {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 14px;
 }

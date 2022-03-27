@@ -5,7 +5,7 @@ const MODAL_STYLES = {
   position: 'fixed',
   top: '45%',
   left: '50%',
-  width: '450px',
+  width: '300px',
   minWidth: '400px',
   transform: 'translate(-50%, -50%)',
   backgroundColor: '#fff',

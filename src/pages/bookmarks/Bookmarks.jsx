@@ -7,11 +7,9 @@ import SidebarLeft from '../../components/menu/sidebar/SidebarLeft'
 export default function Bookmarks() {
   return (
     <>
-      <div className="topbar-fixed">
-        <Topbar />
-        <div className="body-container bookmarks">
-          <SidebarLeft />
-        </div>
+      <Topbar />
+      <div className="content bookmarks">
+        <SidebarLeft />
       </div>
     </>
   )

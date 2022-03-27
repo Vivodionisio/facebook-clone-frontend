@@ -14,9 +14,7 @@ import OtherHousesRoundedIcon from '@mui/icons-material/OtherHousesRounded'
 export default function Profile() {
   return (
     <>
-      <div className="topbar-fixed">
-        <Topbar />
-      </div>
+      <Topbar />
       <div className="profile body-container">
         <div className="profile-header-section">
           <img className="cover-photo" src={CoverPhoto} alt="cover-album-art" />

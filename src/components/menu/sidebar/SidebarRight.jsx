@@ -1,5 +1,5 @@
 import React from 'react'
-import './sidebar.css'
+import './sidebar.scss'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 
 const contacts = [

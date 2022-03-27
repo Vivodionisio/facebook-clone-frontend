@@ -1,7 +1,6 @@
 @media (min-width: 0px) {
-  .body-container.bookmarks .sidebar-container.sidebar-left {
+  .content.bookmarks .sidebar-container.sidebar-left {
     width: calc(100% - 12px);
-    margin-top: 0;
     display: block;
   }
 }

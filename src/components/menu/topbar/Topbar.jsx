@@ -53,47 +53,49 @@ export default function Topbar() {
 
   return (
     <div className="Topbar">
-      <div className="left">
-        <NavLink className="logo btn" to="/">
-          <FacebookOutlinedIcon className="icon" />
-        </NavLink>
-        <div className="search-fb-container">
-          <SearchOutlinedIcon className="icon" />
-          <input className="search-fb-field" placeholder="Search Facebook" />
+      <div className="container">
+        <div className="left">
+          <NavLink className="logo btn" to="/">
+            <FacebookOutlinedIcon className="icon" />
+          </NavLink>
+          <div className="search-fb-container">
+            <SearchOutlinedIcon className="icon" />
+            <input className="search-fb-field" placeholder="Search Facebook" />
+          </div>
         </div>
-      </div>
 
-      <div className="main">
-        <MyNavLink to="/" />
-        <MyNavLink to="/video" />
-        <MyNavLink to="/store" />
-        <MyNavLink to="/groups" />
-        <MyNavLink to="/gaming" />
-        <MyNavLink to="/bookmarks" />
-      </div>
+        <div className="main">
+          <MyNavLink to="/" />
+          <MyNavLink to="/video" />
+          <MyNavLink to="/store" />
+          <MyNavLink to="/groups" />
+          <MyNavLink to="/gaming" />
+          <MyNavLink to="/bookmarks" />
+        </div>
 
-      <div className="right">
-        <NavLink
-          to="/profile/:userName"
-          className={({ isActive }) =>
-            'btn btn-user' + (isActive ? ' activated' : '')
-          }
-        >
-          <FaceIcon className="icon" />
-          <span>Jacamo</span>
-        </NavLink>
-        <button className="btn round">
-          <GrainRoundedIcon className="icon" />
-        </button>
-        <button className="btn round">
-          <ChatBubbleIcon className="icon" />
-        </button>
-        <button className="btn round">
-          <NotificationsIcon className="icon" />
-        </button>
-        <button className="btn round">
-          <ArrowDropDownRoundedIcon className="icon" />
-        </button>
+        <div className="right">
+          <NavLink
+            to="/profile/:userName"
+            className={({ isActive }) =>
+              'btn btn-user' + (isActive ? ' activated' : '')
+            }
+          >
+            <FaceIcon className="icon" />
+            <span>Jacamo</span>
+          </NavLink>
+          <button className="btn round">
+            <GrainRoundedIcon className="icon" />
+          </button>
+          <button className="btn round">
+            <ChatBubbleIcon className="icon" />
+          </button>
+          <button className="btn round">
+            <NotificationsIcon className="icon" />
+          </button>
+          <button className="btn round">
+            <ArrowDropDownRoundedIcon className="icon" />
+          </button>
+        </div>
       </div>
     </div>
   )

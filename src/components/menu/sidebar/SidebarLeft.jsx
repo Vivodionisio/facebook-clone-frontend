@@ -1,5 +1,5 @@
 import React from 'react'
-import './sidebar.css'
+import './sidebar.scss'
 import { sideIcons } from '../../../assets/buttons/buttons'
 import { sideIcons2 } from '../../../assets/buttons/buttons'
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded'

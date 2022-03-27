@@ -8,10 +8,8 @@ import Feed from '../../components/feed/Feed'
 export default function Home() {
   return (
     <>
-      <div className="topbar-fixed">
-        <Topbar />
-      </div>
-      <div className="body-container">
+      <Topbar />
+      <div className="content">
         <SidebarLeft />
         <Feed />
         <SidebarRight />

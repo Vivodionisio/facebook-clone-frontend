@@ -26,7 +26,7 @@ const contacts = [
 
 export default function SidebarRight() {
   return (
-    <div className="sidebar right">
+    <div className="Sidebar right">
       <div className="section-1">
         <h3>Contacts</h3>
         {contacts.map(c => {

@@ -1,0 +1,43 @@
+.Feed {
+  margin-top: 0;
+}
+
+.Feed {
+  // max-width: 35rem;
+  // margin: 60px auto 0;
+  padding-top: 0px;
+  max-width: 35rem;
+  margin: 0px auto 0;
+}
+
+.Feed .bottom {
+  height: 20px;
+  width: 100%;
+}
+
+.Feed .post-card:last-child {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 900px) {
+  .Feed {
+    padding-top: 10px;
+    max-width: 35rem;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  .Feed {
+    max-width: 60%;
+    margin-top: 60px;
+    margin-left: 6%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .Feed {
+    margin: 56px auto 0;
+    max-width: 44%;
+  }
+}

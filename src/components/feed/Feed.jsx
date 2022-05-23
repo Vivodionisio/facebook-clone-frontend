@@ -1,12 +1,12 @@
 import React from 'react'
 import CreatePost from './create-post/CreatePost'
 import Post from './post/Post'
-import './feed.css'
+import './feed.scss'
 import { PostData } from '../../assets/data/PostData'
 
-export default function Posts() {
+export default function Feed() {
   return (
-    <div className="feed-container">
+    <div className="Feed">
       <CreatePost />
       {PostData.map(post => {
         return <Post key={post.id} post={post} />

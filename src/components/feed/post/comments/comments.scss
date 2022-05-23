@@ -1,0 +1,122 @@
+.Comments {
+  padding: 0;
+
+  .write-comment {
+    border-top: 1px solid var(--medium-light);
+
+    .btn {
+      color: var(--medium);
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+
+    .filter {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.6em 0;
+    }
+
+    .input-container {
+      .pill {
+        display: flex;
+        height: 40px;
+        width: calc(100% - 2.2rem - 10px);
+        background: rgb(239, 239, 239);
+        border-radius: 1000px;
+        align-items: center;
+
+        input {
+          width: 100%;
+          background: none;
+          border: none;
+          outline: none;
+          padding: 0.7em;
+          font-size: 14px;
+          font-weight: 300;
+          padding-left: 0.8rem;
+        }
+      }
+    }
+
+    .comments-btn {
+      padding: 0.6em 0.6em;
+
+      .btn {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .bubble {
+    .comment {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      max-width: calc(100% - 2.2rem - 10px);
+      background: var(--light);
+      border-radius: 1em;
+      padding: 0.5em 0.8em;
+
+      a {
+        text-decoration: none;
+        font-weight: 500;
+        color: black;
+        font-size: 12px;
+      }
+
+      p {
+        font-weight: 400;
+        margin-top: 4px;
+        font-size: 15px;
+        line-height: 1.3em;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .line-break {
+      width: 100%;
+    }
+
+    .engagements {
+      margin-left: calc(4.2rem);
+
+      a {
+        font-size: 0.8rem;
+        margin-right: 10px;
+        text-decoration: none;
+        color: var(--medium);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      a:not(.date) {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.input-container,
+.bubble {
+  padding-bottom: 10px;
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-container .account-icon,
+.bubble .account-icon {
+  margin-right: 10px;
+  font-size: 2.2rem;
+}

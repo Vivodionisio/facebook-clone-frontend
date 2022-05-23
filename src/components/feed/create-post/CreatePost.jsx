@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './create-post.css'
+import '../../shared/card.scss'
 import FaceIcon from '@mui/icons-material/Face'
 import { createPostIcons } from '../../../assets/buttons/buttons'
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
@@ -26,7 +27,7 @@ export default function CreatePost() {
   }
 
   return (
-    <div className="create-post card">
+    <div className="CreatePost card">
       <div className="card-header">
         <FaceIcon className="icon" />
         <button onClick={() => setIsOpen(true)} className="create-post-btn btn">

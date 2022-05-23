@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './post.css'
+import './post.scss'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
 import MoreHorizRoundedIcon from '@mui/icons-material/MoreHorizRounded'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
@@ -21,6 +21,7 @@ export default function Post({ post }) {
   const [hoverState, setHoverState] = useState(true)
   const [isLiked, setIsLiked] = useState(false)
   const [likes, setLikes] = useState(post.likes)
+
   const handleLikeClick = () => {
     console.log(likes)
     console.log('handler clicked')
@@ -39,25 +40,25 @@ export default function Post({ post }) {
 
   return (
     <>
-      <div key={post.id} className="card post-card">
+      <div key={post.id} className="Post card">
         {/* header */}
-        <div className="card-header wrapper post">
+        <div className="card-header m-p post-container">
           <AccountCircleIcon className="icon" />
           {post.online && <div className="online"></div>}
-          <div className="post-details">
+          <div className="details">
             <p>
               <a className="user-name" href="#">
                 {post.userName}
               </a>
             </p>
-            <div className="minutiae-wrapper">
+            <div className="minutiae">
               <a href="#">{post.date}</a>
               <span>&middot;</span>
               <PeopleAltIcon className="friends-icon-small" />
             </div>
           </div>
-          <div className="options-wrapper">
-            <button className="options-btn btn">
+          <div className="options">
+            <button className="btn">
               <MoreHorizRoundedIcon className="options-icon" />
             </button>
           </div>
@@ -65,23 +66,20 @@ export default function Post({ post }) {
 
         {/* Body */}
 
-        <div className="card-body">
-          {post.desc && (
-            <div className="wrapper">
-              <p className="description">{post.desc}</p>
-            </div>
-          )}
-          {post.photo && (
-            <div className="image-wrapper">
-              <img className="post-image" src={post.photo} alt="" />
-            </div>
-          )}
-        </div>
+        {post.desc && (
+          <div className="m-p description">
+            <p>{post.desc}</p>
+          </div>
+        )}
+        {post.photo && (
+          <div className="content">
+            <img src={post.photo} alt="" />
+          </div>
+        )}
 
-        {/* Post engagements */}
-        {/* Tally */}
-        <div className="wrapper engagements-wrapper">
-          <div className="emojis-wrapper">
+        {/* Engagements */}
+        <div className="m-p engagements">
+          <div className="left">
             {post.likeCategory.thumbsUp && (
               <img src={thumb} alt="" className="joy-pixels-emoji thumb" />
             )}
@@ -106,7 +104,7 @@ export default function Post({ post }) {
 
             <span className="likes-count">{likes}</span>
           </div>
-          <div>
+          <div className="right">
             <span className="number-of-comments" href="#">
               {post.comments}
             </span>
@@ -119,7 +117,7 @@ export default function Post({ post }) {
         {/* Like Comment Share */}
 
         <div className="card-footer">
-          <div className="like-button-wrapper">
+          <div className="reactions">
             <button
               onClick={() => handleLikeClick()}
               onMouseEnter={() => handleEmojiVisibility()}
@@ -135,7 +133,7 @@ export default function Post({ post }) {
             {hoverState ? (
               <AnimatedEmojis classAnimatedEmojiBar="animated-emojis" />
             ) : (
-              <AnimatedEmojis classAnimatedEmojiBar="animated-emojis hide" />
+              <AnimatedEmojis classAnimatedEmojiBar="hide" />
             )}
           </div>
           <button className="btn" onClick={handleShowWriteCommentClick}>

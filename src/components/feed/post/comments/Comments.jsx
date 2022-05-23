@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded'
 import FaceIcon from '@mui/icons-material/Face'
-import './comments.css'
+import './comments.scss'
 
 export default function Comments({ showWriteComment }) {
   const [showComments, setShowComments] = useState(false)
@@ -13,26 +13,22 @@ export default function Comments({ showWriteComment }) {
   }
   return (
     <>
-      <div className="comments-wrapper wrapper">
+      <div className="Comments wrapper">
         {showWriteComment && (
-          <div className="write-comment-wrapper">
-            <div className="relevant-wrapper">
+          <div className="write-comment">
+            <div className="filter">
               <button className="btn">
                 Most relevant
                 <ArrowDropDownRoundedIcon />
               </button>
             </div>
-            <div className="write-comment-container">
+            <div className="input-container">
               <FaceIcon className="account-icon" />
-              <div className="write-comment-pill-wrapper">
-                <input
-                  className="write-comment-field"
-                  placeholder="Write a comment"
-                  autoFocus
-                />
+              <div className="pill">
+                <input placeholder="Write a comment" autoFocus />
               </div>
             </div>
-            <div className="comments-btn-wrapper">
+            <div className="comments-btn">
               <button className="btn" onClick={handleSetShowComments}>
                 Comments
               </button>
@@ -41,19 +37,15 @@ export default function Comments({ showWriteComment }) {
         )}
 
         {showComments && (
-          <div>
-            <div className="comment-bubble-container">
+          <>
+            <div className="bubble">
               <AccountCircleIcon className="account-icon" />
-              <div className="bubble-wrapper">
-                <div className="comment-wrapper">
-                  <a href="#" className="comment-name">
-                    Popeye
-                  </a>
-                  <p>Amet consectetur adipisicing...</p>
-                </div>
+              <div className="comment">
+                <a href="#">Popeye</a>
+                <p>Amet consectetur adipisicing...</p>
               </div>
               <div className="line-break"></div>
-              <div className="comment-engagememnt">
+              <div className="engagements">
                 <a className="like" href="#">
                   Like
                 </a>
@@ -65,22 +57,18 @@ export default function Comments({ showWriteComment }) {
                 </a>
               </div>
             </div>
-            <div className="comment-bubble-container">
+            <div className="bubble">
               <AccountCircleIcon className="account-icon" />
-              <div className="bubble-wrapper">
-                <div className="comment-wrapper">
-                  <a href="#" className="comment-name">
-                    Olive Oyl
-                  </a>
-                  <p>
-                    Nam atque repellendus animi perspiciatis, aliquid deserunt a
-                    earum labore magnam voluptatum, ab possimus laudantium iste
-                    ipsam quisquam repudiandae.
-                  </p>
-                </div>
+              <div className="comment">
+                <a href="#">Olive Oyl</a>
+                <p>
+                  Nam atque repellendus animi perspiciatis, aliquid deserunt a
+                  earum labore magnam voluptatum, ab possimus laudantium iste
+                  ipsam quisquam repudiandae.
+                </p>
               </div>
               <div className="line-break"></div>
-              <div className="comment-engagememnt">
+              <div className="engagements">
                 <a className="like" href="#">
                   Like
                 </a>
@@ -92,7 +80,7 @@ export default function Comments({ showWriteComment }) {
                 </a>
               </div>
             </div>
-          </div>
+          </>
         )}
       </div>
     </>

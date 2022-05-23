@@ -6,7 +6,7 @@ import face_with_tears_of_joy from '../../assets/emoji-gifs/face_with_tears_of_j
 import loudly_crying_face from '../../assets/emoji-gifs/loudly_crying_face.gif'
 import exploding_head from '../../assets/emoji-gifs/exploding_head.gif'
 import pouting_face from '../../assets/emoji-gifs/pouting_face.gif'
-import './animated-emojis.css'
+import './animated-emojis.scss'
 
 export default function AnimatedEmojis({ classAnimatedEmojiBar }) {
   return (

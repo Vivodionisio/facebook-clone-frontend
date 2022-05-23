@@ -1,0 +1,12 @@
+@media (min-width: 0px) {
+  .main-content {
+    &.bookmarks {
+      .Sidebar {
+        &.left {
+          width: calc(100% - 12px);
+          display: block;
+        }
+      }
+    }
+  }
+}

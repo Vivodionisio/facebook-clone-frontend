@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 export default function SidebarLeft() {
   return (
     <>
-      <div className="sidebar left">
+      <div className="Sidebar left">
         <div className="section-1">
           {sideIcons.map(sideIcon => {
             if (sideIcon.id === 1) {

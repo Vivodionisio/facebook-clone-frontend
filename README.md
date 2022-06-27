@@ -1,18 +1,14 @@
 # Welcome to my Facebook UI clone
 
-<hr />
-
-### Project Purpose
+## Project Purpose
 
 This was my first React project. Its purpose was to demonstrate my knowledge of the reactive way of building a UI and structuring a larger project.
 
-<hr />
-
-### Responsivity
+## Responsivity
 
 Site is fully responsive.
 
-### Data
+## Data
 
 There is no backend to this project. The dummy data used for populating posts exists in PostData.js - src/assets/data/PostData.js
 
@@ -33,6 +29,6 @@ Clicking a like button will toggle the engagements count. Whilst hovering over t
 #### Post comment button
 Clicking the comment button will reveal the 'write a comment' field. And a comments button which will show comments (these have been hard coded)
 
-### Personal Thoughts
+## Personal Thoughts
 
 This was a great first React project. I was surprised at how well it came together. However it is far from perfect, for a veriety of reasons. One example is the css which became a little messy – a great learning curve for my next projects. I did refactor it using Sass, so it is improved, though I recognise my apporach to naming classes has yet to be refined at this point.

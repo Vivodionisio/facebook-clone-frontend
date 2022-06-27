@@ -65,19 +65,19 @@ export default function Profile() {
                   <div className="details-list-item">
                     <WorkIcon className="icon" />
                     <p>
-                      Workss at <span>Island Records</span>
+                      Works at <span>Island Records</span>
                     </p>
                   </div>
                   <div className="details-list-item">
                     <SchoolRoundedIcon className="icon" />
                     <p>
-                      Studied at <span>ACM</span>
+                      Studied at <span>Cambridge</span>
                     </p>
                   </div>
                   <div className="details-list-item">
                     <OtherHousesRoundedIcon className="icon" />
                     <p>
-                      Lives in <span>Little Weston</span>
+                      Lives in <span>Three Hours of Sundown</span>
                     </p>
                   </div>
                 </div>
@@ -85,12 +85,12 @@ export default function Profile() {
             </div>
             <div className="card intro-friends-photos">
               <div className="intro">
-                <h2>Intro</h2>
+                <h2>Other</h2>
                 <div className="details-list">
                   <div className="details-list-item">
                     <WorkIcon className="icon" />
                     <p>
-                      Workss at <span>Island Records</span>
+                      Works at <span>Island Records</span>
                     </p>
                   </div>
                   <div className="details-list-item">

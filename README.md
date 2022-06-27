@@ -31,4 +31,4 @@ Clicking the comment button will reveal the 'write a comment' field. And a comme
 
 ### Personal Thoughts
 
-This was a great first project and I was surprised at how well it came together. However it is far from perfect, for a veriety of reasons. One example is the css which became a little messy – a great learning curve for my next projects. I did refactor it using Sass, so it is improved, though I recognise my apporach to naming classes has yet to be refined at this point.
+This was a great first React project. I was surprised at how well it came together. However it is far from perfect, for a veriety of reasons. One example is the css which became a little messy – a great learning curve for my next projects. I did refactor it using Sass, so it is improved, though I recognise my apporach to naming classes has yet to be refined at this point.

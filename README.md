@@ -1,8 +1,12 @@
 # Welcome to my Facebook UI clone
 
+<hr />
+
 ### Project Purpose
 
 This was my first React project. Its purpose was to demonstrate my knowledge of the reactive way of building a UI and structuring a larger project.
+
+<hr />
 
 ### Responsivity
 

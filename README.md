@@ -20,7 +20,7 @@ The project includes a Home page and Profile page (Jacamo), whilst other pages a
 #### Sidebars
 The sidebars, left and right comprise dummy buttons, aside from the Jacamo link which will take you to the profile.
 
-#####Create post
+#### Create post
 Clicking on the whats on your mind input feed will open up a modal, created using react portal.
 
 #### Post like button

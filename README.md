@@ -40,7 +40,7 @@ The sidebars, left and right comprise dummy buttons, aside from the Jacamo link 
 
 #### Create post
 
-Clicking on the whats on your mind input feed will open up a modal, created using react portal.
+Clicking on the 'whats on your mind' input field will open up a modal, created using react portal.
 
 #### Post like button
 

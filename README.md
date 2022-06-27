@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Welcome to my Facebook UI clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Purpose
 
-## Available Scripts
+This was my first React project. Its purpose was to demonstrate my knowledge of the reactive way of building a UI and structuring a larger project.
 
-In the project directory, you can run:
+### Responsivity
 
-### `npm start`
+Site is fully responsive.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Data
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+There is no backend to this project. The dummy data used for populating posts exists in PostData.js - src/assets/data/PostData.js
 
-### `npm test`
+### Interactivity
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Main Navigation (topbar)
+The project includes a Home page and Profile page (Jacamo), whilst other pages are unpopulated, existing only to demonstrate main navigation functionality.
 
-### `npm run build`
+Sidebars
+The sidebars, left and right comprise dummy buttons, aside from the Jacamo link which will take you to the profile.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Create post
+Clicking on the whats on your mind input feed will open up a modal, created using react portal.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Post like button
+Clicking a like button will toggle the engagements count. Whilst hovering over the button (after a short delay) will trigger transitions to reveal a row of animated emojis.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Post comment button
+Clicking the comment button will reveal the 'write a comment' field. And a comments button which will show comments (these have been hard coded)
 
-### `npm run eject`
+### Personal Thoughts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This was a great first project and I was surprised at how well it came together. However it is far from perfect, in various respects. One exanple is the css which became a little messy, this was a great learning curve for my next projects. I did refactor it using Sass, so it is improved, though I recognise my apporach to naming classes has yet to be refined at this point.

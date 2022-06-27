@@ -65,7 +65,6 @@ export default function Post({ post }) {
         </div>
 
         {/* Body */}
-
         {post.desc && (
           <div className="m-p description">
             <p>{post.desc}</p>

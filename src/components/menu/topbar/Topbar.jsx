@@ -75,7 +75,7 @@ export default function Topbar() {
 
         <div className="right">
           <NavLink
-            to="/profile/:userName"
+            to="/profile/jacamo"
             className={({ isActive }) =>
               'btn btn-user' + (isActive ? ' activated' : '')
             }

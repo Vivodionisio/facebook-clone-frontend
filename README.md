@@ -15,6 +15,7 @@ There is no backend to this project. The dummy data used for populating posts ex
 ### Interactivity
 
 #### Main Navigation (topbar)
+<<<<<<< HEAD
 
 The project includes a Home page and Profile page (Jacamo), whilst other pages are unpopulated, existing only to demonstrate main navigation functionality.
 
@@ -32,6 +33,20 @@ Clicking a like button will toggle the engagements count. Whilst hovering over t
 
 #### Post comment button
 
+=======
+The project includes a Home page and Profile page (Jacamo), whilst other pages are unpopulated, existing only to demonstrate main navigation functionality.
+
+#### Sidebars
+The sidebars, left and right comprise dummy buttons, aside from the Jacamo link which will take you to the profile.
+
+#### Create post
+Clicking on the whats on your mind input feed will open up a modal, created using react portal.
+
+#### Post like button
+Clicking a like button will toggle the engagements count. Whilst hovering over the button (after a short delay) will trigger transitions to reveal a row of animated emojis.
+
+#### Post comment button
+>>>>>>> ec68f00ddd7128eaa74dc9f7dd465320e9a99cc9
 Clicking the comment button will reveal the 'write a comment' field. And a comments button which will show comments (these have been hard coded)
 
 ## Personal Thoughts
